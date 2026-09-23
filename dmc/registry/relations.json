@@ -1,0 +1,923 @@
+{
+  "schemaVersion": "1.0.0",
+  "relations": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000001",
+      "from": "DMC-MA-FES-000001",
+      "to": "DMC-MA-FES-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-fes",
+          "sourceUrl": "https://www.pexels.com/photo/bustling-street-in-fez-medina-morocco-36782884/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:36782884",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 36782884 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000002",
+      "from": "DMC-MA-FES-000001",
+      "to": "world-data.js#fes",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-fes",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "fes",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[0]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000003",
+      "from": "DMC-NG-KAN-000001",
+      "to": "DMC-NG-KAN-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-kano",
+          "sourceUrl": "https://www.pexels.com/photo/colorful-nigerian-horse-riders-near-a-minaret-30799112/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:30799112",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 30799112 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000004",
+      "from": "DMC-NG-KAN-000001",
+      "to": "world-data.js#kano",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-kano",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "kano",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[1]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000005",
+      "from": "DMC-EG-CAI-000001",
+      "to": "DMC-EG-CAI-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-caire",
+          "sourceUrl": "https://www.pexels.com/photo/a-silhouette-of-the-pyramids-during-the-golden-hour-15127135/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:15127135",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 15127135 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000006",
+      "from": "DMC-EG-CAI-000001",
+      "to": "world-data.js#caire",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-caire",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "caire",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[2]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000007",
+      "from": "DMC-IT-VEN-000001",
+      "to": "DMC-IT-VEN-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-venise",
+          "sourceUrl": "https://www.pexels.com/photo/view-of-gondolas-on-the-grand-canal-in-venice-italy-22848736/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:22848736",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 22848736 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000008",
+      "from": "DMC-IT-VEN-000001",
+      "to": "world-data.js#venise",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-venise",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "venise",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[3]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000009",
+      "from": "DMC-BE-BRU-000001",
+      "to": "DMC-BE-BRU-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-bruges",
+          "sourceUrl": "https://www.pexels.com/photo/canal-and-townhouses-in-old-town-5612504/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:5612504",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 5612504 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000010",
+      "from": "DMC-BE-BRU-000001",
+      "to": "world-data.js#bruges",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-bruges",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "bruges",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[4]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000011",
+      "from": "DMC-FR-PAR-000001",
+      "to": "DMC-FR-PAR-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-paris",
+          "sourceUrl": "https://www.pexels.com/photo/eiffel-tower-in-paris-skyline-4456347/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:4456347",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 4456347 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000012",
+      "from": "DMC-FR-PAR-000001",
+      "to": "world-data.js#paris",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-paris",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "paris",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[5]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000013",
+      "from": "DMC-GB-EDI-000001",
+      "to": "DMC-GB-EDI-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-edimbourg",
+          "sourceUrl": "https://www.pexels.com/photo/old-historic-brick-buildings-against-blue-sky-11276637/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:11276637",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 11276637 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000014",
+      "from": "DMC-GB-EDI-000001",
+      "to": "world-data.js#edimbourg",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-edimbourg",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "edimbourg",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[6]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000015",
+      "from": "DMC-IN-LUC-000001",
+      "to": "DMC-IN-LUC-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-lucknow",
+          "sourceUrl": "https://www.pexels.com/photo/iconic-clock-tower-of-lucknow-india-36493429/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:36493429",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 36493429 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000016",
+      "from": "DMC-IN-LUC-000001",
+      "to": "world-data.js#lucknow",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-lucknow",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "lucknow",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[7]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000017",
+      "from": "DMC-IN-KUT-000001",
+      "to": "DMC-IN-KUT-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-kutch",
+          "sourceUrl": "https://www.pexels.com/photo/camel-walking-in-the-great-rann-of-kutch-sunset-39012210/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:39012210",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 39012210 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000018",
+      "from": "DMC-IN-KUT-000001",
+      "to": "world-data.js#kutch",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-kutch",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "kutch",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[8]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000019",
+      "from": "DMC-JP-KYO-000001",
+      "to": "DMC-JP-KYO-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-kyoto",
+          "sourceUrl": "https://www.pexels.com/photo/yasaka-pagoda-in-kyoto-at-sunset-37943558/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:37943558",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 37943558 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000020",
+      "from": "DMC-JP-KYO-000001",
+      "to": "world-data.js#kyoto",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-kyoto",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "kyoto",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[9]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000021",
+      "from": "DMC-UZ-SAM-000001",
+      "to": "DMC-UZ-SAM-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-samarkand",
+          "sourceUrl": "https://www.pexels.com/photo/ornamented-wall-of-building-at-registan-square-in-samarkand-16534574/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:16534574",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 16534574 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000022",
+      "from": "DMC-UZ-SAM-000001",
+      "to": "world-data.js#samarkand",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-samarkand",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "samarkand",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[10]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000023",
+      "from": "DMC-IR-ISF-000001",
+      "to": "DMC-IR-ISF-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-isfahan",
+          "sourceUrl": "https://www.pexels.com/photo/sheikh-lotfollah-mosque-in-isfahan-in-iran-20081362/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:20081362",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 20081362 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000024",
+      "from": "DMC-IR-ISF-000001",
+      "to": "world-data.js#isfahan",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-isfahan",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "isfahan",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[11]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000025",
+      "from": "DMC-VN-HAN-000001",
+      "to": "DMC-VN-HAN-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-hanoi",
+          "sourceUrl": "https://www.pexels.com/photo/busy-street-scene-in-hanoi-with-pedestrians-and-traffic-36776809/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:36776809",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 36776809 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000026",
+      "from": "DMC-VN-HAN-000001",
+      "to": "world-data.js#hanoi",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-hanoi",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "hanoi",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[12]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000027",
+      "from": "DMC-MX-OAX-000001",
+      "to": "DMC-MX-OAX-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-oaxaca",
+          "sourceUrl": "https://www.pexels.com/photo/colorful-buildings-and-cloths-over-street-in-town-27065503/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:27065503",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 27065503 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000028",
+      "from": "DMC-MX-OAX-000001",
+      "to": "world-data.js#oaxaca",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-oaxaca",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "oaxaca",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[13]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000029",
+      "from": "DMC-PE-CUS-000001",
+      "to": "DMC-PE-CUS-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-cusco",
+          "sourceUrl": "https://www.pexels.com/photo/mountains-surrounding-the-peruvian-city-of-cusco-16963411/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:16963411",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 16963411 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000030",
+      "from": "DMC-PE-CUS-000001",
+      "to": "world-data.js#cusco",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-cusco",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "cusco",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[14]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000031",
+      "from": "DMC-GT-CHI-000001",
+      "to": "DMC-GT-CHI-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-chichi",
+          "sourceUrl": "https://www.pexels.com/photo/iglesia-de-santo-tomas-chichicastenango-guatemala-11828651/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:11828651",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 11828651 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000032",
+      "from": "DMC-GT-CHI-000001",
+      "to": "world-data.js#chichi",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-chichi",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "chichi",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[15]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000033",
+      "from": "DMC-NZ-AUC-000001",
+      "to": "DMC-NZ-AUC-000001#media-0",
+      "type": "ILLUSTRE_PAR",
+      "sources": [
+        {
+          "id": "src-pexels-auckland",
+          "sourceUrl": "https://www.pexels.com/photo/scenic-beach-view-in-auckland-new-zealand-35227201/",
+          "sourceType": "SOURCE_OFFICIELLE",
+          "sourceName": "Pexels",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "pexels:35227201",
+          "status": "SOURCE_OFFICIELLE",
+          "confidence": 0.9,
+          "locator": "media"
+        }
+      ],
+      "status": "SOURCE_OFFICIELLE",
+      "nature": "RÉEL",
+      "confidence": 0.9,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Photo Pexels 35227201 — image d'ambiance, jamais une photographie de mariage réel."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rel-000034",
+      "from": "DMC-NZ-AUC-000001",
+      "to": "world-data.js#auckland",
+      "type": "DECRIT_PAR",
+      "sources": [
+        {
+          "id": "src-project-auckland",
+          "sourceUrl": null,
+          "sourceType": "PROJECT_FILE",
+          "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+          "retrievedAt": "2026-09-23",
+          "updatedAt": null,
+          "externalId": "auckland",
+          "status": "CONFIRMÉ",
+          "confidence": 0.85,
+          "locator": "entities[16]"
+        }
+      ],
+      "status": "CONFIRMÉ",
+      "nature": "ÉDITORIAL",
+      "confidence": 0.85,
+      "createdAt": "2026-09-23",
+      "updatedAt": null,
+      "note": "Contenu éditorial du renderer Globe (sujet/accroche/contenu), résolu par référence — aucune duplication."
+    }
+  ]
+}

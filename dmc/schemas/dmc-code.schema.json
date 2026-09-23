@@ -1,0 +1,7 @@
+{
+  "$id": "dmc:schema:dmc-code",
+  "version": "1.0.0",
+  "title": "Code DMC — DMC-<PAYS ISO-2>-<TERRITOIRE 3L>-<SÉQUENCE 6>",
+  "type": "string",
+  "pattern": "^DMC-[A-Z]{2}-[A-Z]{3}-\\d{6}$"
+}

@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "dmc": "DMC-IN-KUT-000001",
+  "type": "PLACE",
+  "subtype": "ville",
+  "name": "Kutch",
+  "aliases": [],
+  "description": {
+    "text": "Noces sur le désert blanc — le Grand Rann de sel",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-kutch"
+    ]
+  },
+  "territory": {
+    "name": "Gujarat",
+    "country": "Inde",
+    "countryCode": "IN",
+    "region": null
+  },
+  "coordinates": {
+    "lat": 23.73,
+    "lon": 69.86,
+    "nature": "RÉEL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-kutch"
+    ]
+  },
+  "typologies": [
+    {
+      "canonical": "VILLE",
+      "originalTerm": "ville",
+      "originalVocabulary": "world-data.js",
+      "sourceRefs": [
+        "src-project-kutch"
+      ]
+    }
+  ],
+  "category": {
+    "value": "INSOLITE",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-kutch"
+    ]
+  },
+  "externalIds": {
+    "project:id": "kutch",
+    "pexels:photo": "39012210"
+  },
+  "sources": [
+    {
+      "id": "src-project-kutch",
+      "sourceUrl": null,
+      "sourceType": "PROJECT_FILE",
+      "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "kutch",
+      "status": "CONFIRMÉ",
+      "confidence": 0.85,
+      "locator": "entities[8]"
+    },
+    {
+      "id": "src-pexels-kutch",
+      "sourceUrl": "https://www.pexels.com/photo/camel-walking-in-the-great-rann-of-kutch-sunset-39012210/",
+      "sourceType": "SOURCE_OFFICIELLE",
+      "sourceName": "Pexels",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "pexels:39012210",
+      "status": "SOURCE_OFFICIELLE",
+      "confidence": 0.9,
+      "locator": "media"
+    }
+  ],
+  "media": [
+    {
+      "kind": "IMAGE",
+      "url": "https://images.pexels.com/photos/39012210/pexels-photo-39012210.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "pageUrl": "https://www.pexels.com/photo/camel-walking-in-the-great-rann-of-kutch-sunset-39012210/",
+      "author": "Sneha Ravindranath",
+      "license": "https://www.pexels.com/license/",
+      "subject": "Grand Rann de Kutch, Gujarat — désert de sel au coucher du soleil",
+      "caption": "Chameau au coucher du soleil sur le Grand Rann de Kutch",
+      "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté.",
+      "query": "rann of kutch",
+      "externalId": "pexels:39012210",
+      "nature": "RÉEL",
+      "illustration": true,
+      "source": {
+        "id": "src-pexels-kutch",
+        "sourceUrl": "https://www.pexels.com/photo/camel-walking-in-the-great-rann-of-kutch-sunset-39012210/",
+        "sourceType": "SOURCE_OFFICIELLE",
+        "sourceName": "Pexels",
+        "retrievedAt": "2026-09-23",
+        "updatedAt": null,
+        "externalId": "pexels:39012210",
+        "status": "SOURCE_OFFICIELLE",
+        "confidence": 0.9,
+        "locator": "media"
+      }
+    }
+  ],
+  "contentRefs": [
+    {
+      "ref": "world-data.js#kutch",
+      "kind": "SUJET",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-kutch"
+      ]
+    },
+    {
+      "ref": "world-data.js#kutch",
+      "kind": "ACCROCHE",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-kutch"
+      ]
+    },
+    {
+      "ref": "world-data.js#kutch",
+      "kind": "CONTENU",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-kutch"
+      ]
+    }
+  ],
+  "rendererContracts": {
+    "globe": {
+      "pointId": "kutch",
+      "city": "Kutch",
+      "relationsKeys": [
+        "worldData",
+        "edition",
+        "page",
+        "destination",
+        "story",
+        "wedding"
+      ],
+      "relationsValues": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "discover": {
+        "label": "Découvrir",
+        "kind": "pexels-source",
+        "href": "https://www.pexels.com/photo/camel-walking-in-the-great-rann-of-kutch-sunset-39012210/"
+      }
+    }
+  },
+  "status": "CONFIRMÉ",
+  "createdAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "notes": "Migré depuis world-data.js v2.0.0 (migration déterministe, test aller-retour par globe-adapter)."
+}

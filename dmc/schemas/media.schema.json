@@ -1,0 +1,22 @@
+{
+  "$id": "dmc:schema:media",
+  "version": "1.0.0",
+  "title": "Média relié à un DMC — provenance obligatoire",
+  "type": "object",
+  "required": ["kind", "nature", "source"],
+  "properties": {
+    "kind": { "type": "string", "enum": ["IMAGE", "VIDEO", "AUDIO", "GALERIE", "DOCUMENT"] },
+    "url": { "type": ["string", "null"], "pattern": "^https?://" },
+    "pageUrl": { "type": ["string", "null"], "pattern": "^https?://" },
+    "author": { "type": ["string", "null"] },
+    "license": { "type": ["string", "null"] },
+    "subject": { "type": ["string", "null"] },
+    "caption": { "type": ["string", "null"] },
+    "note": { "type": ["string", "null"] },
+    "query": { "type": ["string", "null"] },
+    "externalId": { "type": ["string", "null"] },
+    "nature": { "type": "string", "enum": ["RÉEL", "RECONSTITUÉ", "ÉDITORIAL"] },
+    "illustration": { "type": "boolean" },
+    "source": { "$ref": "dmc:schema:source" }
+  }
+}

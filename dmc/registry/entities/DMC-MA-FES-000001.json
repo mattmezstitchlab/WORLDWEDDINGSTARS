@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "dmc": "DMC-MA-FES-000001",
+  "type": "PLACE",
+  "subtype": "ville",
+  "name": "Fès",
+  "aliases": [],
+  "description": {
+    "text": "Destination mariage — médina millénaire classée à l'UNESCO",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-fes"
+    ]
+  },
+  "territory": {
+    "name": "Fès-Meknès",
+    "country": "Maroc",
+    "countryCode": "MA",
+    "region": null
+  },
+  "coordinates": {
+    "lat": 34.06,
+    "lon": -4.98,
+    "nature": "RÉEL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-fes"
+    ]
+  },
+  "typologies": [
+    {
+      "canonical": "VILLE",
+      "originalTerm": "ville",
+      "originalVocabulary": "world-data.js",
+      "sourceRefs": [
+        "src-project-fes"
+      ]
+    }
+  ],
+  "category": {
+    "value": "PATRIMOINE",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-fes"
+    ]
+  },
+  "externalIds": {
+    "project:id": "fes",
+    "pexels:photo": "36782884"
+  },
+  "sources": [
+    {
+      "id": "src-project-fes",
+      "sourceUrl": null,
+      "sourceType": "PROJECT_FILE",
+      "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "fes",
+      "status": "CONFIRMÉ",
+      "confidence": 0.85,
+      "locator": "entities[0]"
+    },
+    {
+      "id": "src-pexels-fes",
+      "sourceUrl": "https://www.pexels.com/photo/bustling-street-in-fez-medina-morocco-36782884/",
+      "sourceType": "SOURCE_OFFICIELLE",
+      "sourceName": "Pexels",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "pexels:36782884",
+      "status": "SOURCE_OFFICIELLE",
+      "confidence": 0.9,
+      "locator": "media"
+    }
+  ],
+  "media": [
+    {
+      "kind": "IMAGE",
+      "url": "https://images.pexels.com/photos/36782884/pexels-photo-36782884.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "pageUrl": "https://www.pexels.com/photo/bustling-street-in-fez-medina-morocco-36782884/",
+      "author": "Miguel Cuenca",
+      "license": "https://www.pexels.com/license/",
+      "subject": "Médina de Fès, Maroc — architecture et ruelles",
+      "caption": "Ruelle animée de la médina de Fès",
+      "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté.",
+      "query": "fez morocco medina",
+      "externalId": "pexels:36782884",
+      "nature": "RÉEL",
+      "illustration": true,
+      "source": {
+        "id": "src-pexels-fes",
+        "sourceUrl": "https://www.pexels.com/photo/bustling-street-in-fez-medina-morocco-36782884/",
+        "sourceType": "SOURCE_OFFICIELLE",
+        "sourceName": "Pexels",
+        "retrievedAt": "2026-09-23",
+        "updatedAt": null,
+        "externalId": "pexels:36782884",
+        "status": "SOURCE_OFFICIELLE",
+        "confidence": 0.9,
+        "locator": "media"
+      }
+    }
+  ],
+  "contentRefs": [
+    {
+      "ref": "world-data.js#fes",
+      "kind": "SUJET",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-fes"
+      ]
+    },
+    {
+      "ref": "world-data.js#fes",
+      "kind": "ACCROCHE",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-fes"
+      ]
+    },
+    {
+      "ref": "world-data.js#fes",
+      "kind": "CONTENU",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-fes"
+      ]
+    }
+  ],
+  "rendererContracts": {
+    "globe": {
+      "pointId": "fes",
+      "city": "Fès",
+      "relationsKeys": [
+        "worldData",
+        "edition",
+        "page",
+        "destination",
+        "story",
+        "wedding"
+      ],
+      "relationsValues": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "discover": {
+        "label": "Découvrir",
+        "kind": "pexels-source",
+        "href": "https://www.pexels.com/photo/bustling-street-in-fez-medina-morocco-36782884/"
+      }
+    }
+  },
+  "status": "CONFIRMÉ",
+  "createdAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "notes": "Migré depuis world-data.js v2.0.0 (migration déterministe, test aller-retour par globe-adapter)."
+}

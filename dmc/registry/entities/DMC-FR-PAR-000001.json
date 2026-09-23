@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "dmc": "DMC-FR-PAR-000001",
+  "type": "PLACE",
+  "subtype": "ville",
+  "name": "Paris",
+  "aliases": [],
+  "description": {
+    "text": "Ville romantique — destination mariage emblématique",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-paris"
+    ]
+  },
+  "territory": {
+    "name": "Île-de-France",
+    "country": "France",
+    "countryCode": "FR",
+    "region": null
+  },
+  "coordinates": {
+    "lat": 48.86,
+    "lon": 2.35,
+    "nature": "RÉEL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-paris"
+    ]
+  },
+  "typologies": [
+    {
+      "canonical": "VILLE",
+      "originalTerm": "ville",
+      "originalVocabulary": "world-data.js",
+      "sourceRefs": [
+        "src-project-paris"
+      ]
+    }
+  ],
+  "category": {
+    "value": "ROMANCE",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-paris"
+    ]
+  },
+  "externalIds": {
+    "project:id": "paris",
+    "pexels:photo": "4456347"
+  },
+  "sources": [
+    {
+      "id": "src-project-paris",
+      "sourceUrl": null,
+      "sourceType": "PROJECT_FILE",
+      "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "paris",
+      "status": "CONFIRMÉ",
+      "confidence": 0.85,
+      "locator": "entities[5]"
+    },
+    {
+      "id": "src-pexels-paris",
+      "sourceUrl": "https://www.pexels.com/photo/eiffel-tower-in-paris-skyline-4456347/",
+      "sourceType": "SOURCE_OFFICIELLE",
+      "sourceName": "Pexels",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "pexels:4456347",
+      "status": "SOURCE_OFFICIELLE",
+      "confidence": 0.9,
+      "locator": "media"
+    }
+  ],
+  "media": [
+    {
+      "kind": "IMAGE",
+      "url": "https://images.pexels.com/photos/4456347/pexels-photo-4456347.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "pageUrl": "https://www.pexels.com/photo/eiffel-tower-in-paris-skyline-4456347/",
+      "author": "Vlada Karpovich",
+      "license": "https://www.pexels.com/license/",
+      "subject": "Paris, France — tour Eiffel et skyline",
+      "caption": "La tour Eiffel dans le ciel de Paris",
+      "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté.",
+      "query": "paris france eiffel tower",
+      "externalId": "pexels:4456347",
+      "nature": "RÉEL",
+      "illustration": true,
+      "source": {
+        "id": "src-pexels-paris",
+        "sourceUrl": "https://www.pexels.com/photo/eiffel-tower-in-paris-skyline-4456347/",
+        "sourceType": "SOURCE_OFFICIELLE",
+        "sourceName": "Pexels",
+        "retrievedAt": "2026-09-23",
+        "updatedAt": null,
+        "externalId": "pexels:4456347",
+        "status": "SOURCE_OFFICIELLE",
+        "confidence": 0.9,
+        "locator": "media"
+      }
+    }
+  ],
+  "contentRefs": [
+    {
+      "ref": "world-data.js#paris",
+      "kind": "SUJET",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-paris"
+      ]
+    },
+    {
+      "ref": "world-data.js#paris",
+      "kind": "ACCROCHE",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-paris"
+      ]
+    },
+    {
+      "ref": "world-data.js#paris",
+      "kind": "CONTENU",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-paris"
+      ]
+    }
+  ],
+  "rendererContracts": {
+    "globe": {
+      "pointId": "paris",
+      "city": "Paris",
+      "relationsKeys": [
+        "worldData",
+        "edition",
+        "page",
+        "destination",
+        "story",
+        "wedding"
+      ],
+      "relationsValues": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "discover": {
+        "label": "Découvrir",
+        "kind": "pexels-source",
+        "href": "https://www.pexels.com/photo/eiffel-tower-in-paris-skyline-4456347/"
+      }
+    }
+  },
+  "status": "CONFIRMÉ",
+  "createdAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "notes": "Migré depuis world-data.js v2.0.0 (migration déterministe, test aller-retour par globe-adapter)."
+}

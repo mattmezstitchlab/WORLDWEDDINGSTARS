@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "dmc": "DMC-IN-LUC-000001",
+  "type": "PLACE",
+  "subtype": "ville",
+  "name": "Lucknow",
+  "aliases": [],
+  "description": {
+    "text": "Festins de noces awadhi — la ville des nawabs",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-lucknow"
+    ]
+  },
+  "territory": {
+    "name": "Uttar Pradesh",
+    "country": "Inde",
+    "countryCode": "IN",
+    "region": null
+  },
+  "coordinates": {
+    "lat": 26.85,
+    "lon": 80.95,
+    "nature": "RÉEL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-lucknow"
+    ]
+  },
+  "typologies": [
+    {
+      "canonical": "VILLE",
+      "originalTerm": "ville",
+      "originalVocabulary": "world-data.js",
+      "sourceRefs": [
+        "src-project-lucknow"
+      ]
+    }
+  ],
+  "category": {
+    "value": "GASTRONOMIE",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-lucknow"
+    ]
+  },
+  "externalIds": {
+    "project:id": "lucknow",
+    "pexels:photo": "36493429"
+  },
+  "sources": [
+    {
+      "id": "src-project-lucknow",
+      "sourceUrl": null,
+      "sourceType": "PROJECT_FILE",
+      "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "lucknow",
+      "status": "CONFIRMÉ",
+      "confidence": 0.85,
+      "locator": "entities[7]"
+    },
+    {
+      "id": "src-pexels-lucknow",
+      "sourceUrl": "https://www.pexels.com/photo/iconic-clock-tower-of-lucknow-india-36493429/",
+      "sourceType": "SOURCE_OFFICIELLE",
+      "sourceName": "Pexels",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "pexels:36493429",
+      "status": "SOURCE_OFFICIELLE",
+      "confidence": 0.9,
+      "locator": "media"
+    }
+  ],
+  "media": [
+    {
+      "kind": "IMAGE",
+      "url": "https://images.pexels.com/photos/36493429/pexels-photo-36493429.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "pageUrl": "https://www.pexels.com/photo/iconic-clock-tower-of-lucknow-india-36493429/",
+      "author": "Manan Maheshwari",
+      "license": "https://www.pexels.com/license/",
+      "subject": "Lucknow, Inde — tour de l'Horloge de Husainabad",
+      "caption": "La tour de l'Horloge de Husainabad, Lucknow",
+      "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté.",
+      "query": "lucknow india",
+      "externalId": "pexels:36493429",
+      "nature": "RÉEL",
+      "illustration": true,
+      "source": {
+        "id": "src-pexels-lucknow",
+        "sourceUrl": "https://www.pexels.com/photo/iconic-clock-tower-of-lucknow-india-36493429/",
+        "sourceType": "SOURCE_OFFICIELLE",
+        "sourceName": "Pexels",
+        "retrievedAt": "2026-09-23",
+        "updatedAt": null,
+        "externalId": "pexels:36493429",
+        "status": "SOURCE_OFFICIELLE",
+        "confidence": 0.9,
+        "locator": "media"
+      }
+    }
+  ],
+  "contentRefs": [
+    {
+      "ref": "world-data.js#lucknow",
+      "kind": "SUJET",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-lucknow"
+      ]
+    },
+    {
+      "ref": "world-data.js#lucknow",
+      "kind": "ACCROCHE",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-lucknow"
+      ]
+    },
+    {
+      "ref": "world-data.js#lucknow",
+      "kind": "CONTENU",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-lucknow"
+      ]
+    }
+  ],
+  "rendererContracts": {
+    "globe": {
+      "pointId": "lucknow",
+      "city": "Lucknow",
+      "relationsKeys": [
+        "worldData",
+        "edition",
+        "page",
+        "destination",
+        "story",
+        "wedding"
+      ],
+      "relationsValues": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "discover": {
+        "label": "Découvrir",
+        "kind": "pexels-source",
+        "href": "https://www.pexels.com/photo/iconic-clock-tower-of-lucknow-india-36493429/"
+      }
+    }
+  },
+  "status": "CONFIRMÉ",
+  "createdAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "notes": "Migré depuis world-data.js v2.0.0 (migration déterministe, test aller-retour par globe-adapter)."
+}

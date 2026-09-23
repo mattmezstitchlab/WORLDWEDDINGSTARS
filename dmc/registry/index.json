@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-23T03:48:13.146Z",
+  "count": 17,
+  "entities": [
+    {
+      "dmc": "DMC-MA-FES-000001",
+      "type": "PLACE",
+      "name": "Fès",
+      "territory": "Fès-Meknès",
+      "countryCode": "MA",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-MA-FES-000001.json"
+    },
+    {
+      "dmc": "DMC-NG-KAN-000001",
+      "type": "PLACE",
+      "name": "Kano",
+      "territory": "Kano",
+      "countryCode": "NG",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-NG-KAN-000001.json"
+    },
+    {
+      "dmc": "DMC-EG-CAI-000001",
+      "type": "PLACE",
+      "name": "Le Caire",
+      "territory": "Grand Caire",
+      "countryCode": "EG",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-EG-CAI-000001.json"
+    },
+    {
+      "dmc": "DMC-IT-VEN-000001",
+      "type": "PLACE",
+      "name": "Venise",
+      "territory": "Vénétie",
+      "countryCode": "IT",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-IT-VEN-000001.json"
+    },
+    {
+      "dmc": "DMC-BE-BRU-000001",
+      "type": "PLACE",
+      "name": "Bruges",
+      "territory": "Flandre-Occidentale",
+      "countryCode": "BE",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-BE-BRU-000001.json"
+    },
+    {
+      "dmc": "DMC-FR-PAR-000001",
+      "type": "PLACE",
+      "name": "Paris",
+      "territory": "Île-de-France",
+      "countryCode": "FR",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-FR-PAR-000001.json"
+    },
+    {
+      "dmc": "DMC-GB-EDI-000001",
+      "type": "PLACE",
+      "name": "Édimbourg",
+      "territory": "Écosse",
+      "countryCode": "GB",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-GB-EDI-000001.json"
+    },
+    {
+      "dmc": "DMC-IN-LUC-000001",
+      "type": "PLACE",
+      "name": "Lucknow",
+      "territory": "Uttar Pradesh",
+      "countryCode": "IN",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-IN-LUC-000001.json"
+    },
+    {
+      "dmc": "DMC-IN-KUT-000001",
+      "type": "PLACE",
+      "name": "Kutch",
+      "territory": "Gujarat",
+      "countryCode": "IN",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-IN-KUT-000001.json"
+    },
+    {
+      "dmc": "DMC-JP-KYO-000001",
+      "type": "PLACE",
+      "name": "Kyoto",
+      "territory": "Kansai",
+      "countryCode": "JP",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-JP-KYO-000001.json"
+    },
+    {
+      "dmc": "DMC-UZ-SAM-000001",
+      "type": "PLACE",
+      "name": "Samarkand",
+      "territory": "Samarcande",
+      "countryCode": "UZ",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-UZ-SAM-000001.json"
+    },
+    {
+      "dmc": "DMC-IR-ISF-000001",
+      "type": "PLACE",
+      "name": "Isfahan",
+      "territory": "Ispahan",
+      "countryCode": "IR",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-IR-ISF-000001.json"
+    },
+    {
+      "dmc": "DMC-VN-HAN-000001",
+      "type": "PLACE",
+      "name": "Hanoï",
+      "territory": "Delta du Fleuve Rouge",
+      "countryCode": "VN",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-VN-HAN-000001.json"
+    },
+    {
+      "dmc": "DMC-MX-OAX-000001",
+      "type": "PLACE",
+      "name": "Oaxaca",
+      "territory": "Oaxaca",
+      "countryCode": "MX",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-MX-OAX-000001.json"
+    },
+    {
+      "dmc": "DMC-PE-CUS-000001",
+      "type": "PLACE",
+      "name": "Cusco",
+      "territory": "Cusco",
+      "countryCode": "PE",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-PE-CUS-000001.json"
+    },
+    {
+      "dmc": "DMC-GT-CHI-000001",
+      "type": "PLACE",
+      "name": "Chichicastenango",
+      "territory": "Quiché",
+      "countryCode": "GT",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-GT-CHI-000001.json"
+    },
+    {
+      "dmc": "DMC-NZ-AUC-000001",
+      "type": "PLACE",
+      "name": "Auckland",
+      "territory": "Tāmaki Makaurau",
+      "countryCode": "NZ",
+      "status": "CONFIRMÉ",
+      "file": "entities/DMC-NZ-AUC-000001.json"
+    }
+  ],
+  "relationCount": 34
+}

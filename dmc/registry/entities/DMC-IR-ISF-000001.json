@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "dmc": "DMC-IR-ISF-000001",
+  "type": "PLACE",
+  "subtype": "ville",
+  "name": "Isfahan",
+  "aliases": [],
+  "description": {
+    "text": "Le sofreh aghd et les jardins d'Ispahan",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-isfahan"
+    ]
+  },
+  "territory": {
+    "name": "Ispahan",
+    "country": "Iran",
+    "countryCode": "IR",
+    "region": null
+  },
+  "coordinates": {
+    "lat": 32.65,
+    "lon": 51.67,
+    "nature": "RÉEL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-isfahan"
+    ]
+  },
+  "typologies": [
+    {
+      "canonical": "VILLE",
+      "originalTerm": "ville",
+      "originalVocabulary": "world-data.js",
+      "sourceRefs": [
+        "src-project-isfahan"
+      ]
+    }
+  ],
+  "category": {
+    "value": "CULTURE",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-isfahan"
+    ]
+  },
+  "externalIds": {
+    "project:id": "isfahan",
+    "pexels:photo": "20081362"
+  },
+  "sources": [
+    {
+      "id": "src-project-isfahan",
+      "sourceUrl": null,
+      "sourceType": "PROJECT_FILE",
+      "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "isfahan",
+      "status": "CONFIRMÉ",
+      "confidence": 0.85,
+      "locator": "entities[11]"
+    },
+    {
+      "id": "src-pexels-isfahan",
+      "sourceUrl": "https://www.pexels.com/photo/sheikh-lotfollah-mosque-in-isfahan-in-iran-20081362/",
+      "sourceType": "SOURCE_OFFICIELLE",
+      "sourceName": "Pexels",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "pexels:20081362",
+      "status": "SOURCE_OFFICIELLE",
+      "confidence": 0.9,
+      "locator": "media"
+    }
+  ],
+  "media": [
+    {
+      "kind": "IMAGE",
+      "url": "https://images.pexels.com/photos/20081362/pexels-photo-20081362.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "pageUrl": "https://www.pexels.com/photo/sheikh-lotfollah-mosque-in-isfahan-in-iran-20081362/",
+      "author": "Faruk Tokluoglu",
+      "license": "https://www.pexels.com/license/",
+      "subject": "Isfahan, Iran — mosquée du Sheikh Lotfollah et son reflet",
+      "caption": "La mosquée du Sheikh Lotfollah reflétée, Isfahan",
+      "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté.",
+      "query": "isfahan",
+      "externalId": "pexels:20081362",
+      "nature": "RÉEL",
+      "illustration": true,
+      "source": {
+        "id": "src-pexels-isfahan",
+        "sourceUrl": "https://www.pexels.com/photo/sheikh-lotfollah-mosque-in-isfahan-in-iran-20081362/",
+        "sourceType": "SOURCE_OFFICIELLE",
+        "sourceName": "Pexels",
+        "retrievedAt": "2026-09-23",
+        "updatedAt": null,
+        "externalId": "pexels:20081362",
+        "status": "SOURCE_OFFICIELLE",
+        "confidence": 0.9,
+        "locator": "media"
+      }
+    }
+  ],
+  "contentRefs": [
+    {
+      "ref": "world-data.js#isfahan",
+      "kind": "SUJET",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-isfahan"
+      ]
+    },
+    {
+      "ref": "world-data.js#isfahan",
+      "kind": "ACCROCHE",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-isfahan"
+      ]
+    },
+    {
+      "ref": "world-data.js#isfahan",
+      "kind": "CONTENU",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-isfahan"
+      ]
+    }
+  ],
+  "rendererContracts": {
+    "globe": {
+      "pointId": "isfahan",
+      "city": "Isfahan",
+      "relationsKeys": [
+        "worldData",
+        "edition",
+        "page",
+        "destination",
+        "story",
+        "wedding"
+      ],
+      "relationsValues": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "discover": {
+        "label": "Découvrir",
+        "kind": "pexels-source",
+        "href": "https://www.pexels.com/photo/sheikh-lotfollah-mosque-in-isfahan-in-iran-20081362/"
+      }
+    }
+  },
+  "status": "CONFIRMÉ",
+  "createdAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "notes": "Migré depuis world-data.js v2.0.0 (migration déterministe, test aller-retour par globe-adapter)."
+}
