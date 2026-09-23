@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "dmc": "DMC-GB-EDI-000001",
+  "type": "PLACE",
+  "subtype": "ville",
+  "name": "Édimbourg",
+  "aliases": [],
+  "description": {
+    "text": "Mariages d'Écosse — vieille ville et cornemuses",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-edimbourg"
+    ]
+  },
+  "territory": {
+    "name": "Écosse",
+    "country": "Royaume-Uni",
+    "countryCode": "GB",
+    "region": null
+  },
+  "coordinates": {
+    "lat": 55.95,
+    "lon": -3.19,
+    "nature": "RÉEL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-edimbourg"
+    ]
+  },
+  "typologies": [
+    {
+      "canonical": "VILLE",
+      "originalTerm": "ville",
+      "originalVocabulary": "world-data.js",
+      "sourceRefs": [
+        "src-project-edimbourg"
+      ]
+    }
+  ],
+  "category": {
+    "value": "DESTINATION",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-edimbourg"
+    ]
+  },
+  "externalIds": {
+    "project:id": "edimbourg",
+    "pexels:photo": "11276637"
+  },
+  "sources": [
+    {
+      "id": "src-project-edimbourg",
+      "sourceUrl": null,
+      "sourceType": "PROJECT_FILE",
+      "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "edimbourg",
+      "status": "CONFIRMÉ",
+      "confidence": 0.85,
+      "locator": "entities[6]"
+    },
+    {
+      "id": "src-pexels-edimbourg",
+      "sourceUrl": "https://www.pexels.com/photo/old-historic-brick-buildings-against-blue-sky-11276637/",
+      "sourceType": "SOURCE_OFFICIELLE",
+      "sourceName": "Pexels",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "pexels:11276637",
+      "status": "SOURCE_OFFICIELLE",
+      "confidence": 0.9,
+      "locator": "media"
+    }
+  ],
+  "media": [
+    {
+      "kind": "IMAGE",
+      "url": "https://images.pexels.com/photos/11276637/pexels-photo-11276637.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "pageUrl": "https://www.pexels.com/photo/old-historic-brick-buildings-against-blue-sky-11276637/",
+      "author": "Anna Kozlova",
+      "license": "https://www.pexels.com/license/",
+      "subject": "Édimbourg, Écosse — le château et l'architecture historique",
+      "caption": "Le château d'Édimbourg sous un ciel bleu",
+      "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté.",
+      "query": "edinburgh scotland",
+      "externalId": "pexels:11276637",
+      "nature": "RÉEL",
+      "illustration": true,
+      "source": {
+        "id": "src-pexels-edimbourg",
+        "sourceUrl": "https://www.pexels.com/photo/old-historic-brick-buildings-against-blue-sky-11276637/",
+        "sourceType": "SOURCE_OFFICIELLE",
+        "sourceName": "Pexels",
+        "retrievedAt": "2026-09-23",
+        "updatedAt": null,
+        "externalId": "pexels:11276637",
+        "status": "SOURCE_OFFICIELLE",
+        "confidence": 0.9,
+        "locator": "media"
+      }
+    }
+  ],
+  "contentRefs": [
+    {
+      "ref": "world-data.js#edimbourg",
+      "kind": "SUJET",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-edimbourg"
+      ]
+    },
+    {
+      "ref": "world-data.js#edimbourg",
+      "kind": "ACCROCHE",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-edimbourg"
+      ]
+    },
+    {
+      "ref": "world-data.js#edimbourg",
+      "kind": "CONTENU",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-edimbourg"
+      ]
+    }
+  ],
+  "rendererContracts": {
+    "globe": {
+      "pointId": "edimbourg",
+      "city": "Édimbourg",
+      "relationsKeys": [
+        "worldData",
+        "edition",
+        "page",
+        "destination",
+        "story",
+        "wedding"
+      ],
+      "relationsValues": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "discover": {
+        "label": "Découvrir",
+        "kind": "pexels-source",
+        "href": "https://www.pexels.com/photo/old-historic-brick-buildings-against-blue-sky-11276637/"
+      }
+    }
+  },
+  "status": "CONFIRMÉ",
+  "createdAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "notes": "Migré depuis world-data.js v2.0.0 (migration déterministe, test aller-retour par globe-adapter)."
+}

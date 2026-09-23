@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "dmc": "DMC-BE-BRU-000001",
+  "type": "PLACE",
+  "subtype": "ville",
+  "name": "Bruges",
+  "aliases": [],
+  "description": {
+    "text": "Lune de miel en Flandre — canaux et béguinage",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-bruges"
+    ]
+  },
+  "territory": {
+    "name": "Flandre-Occidentale",
+    "country": "Belgique",
+    "countryCode": "BE",
+    "region": null
+  },
+  "coordinates": {
+    "lat": 51.21,
+    "lon": 3.22,
+    "nature": "RÉEL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-bruges"
+    ]
+  },
+  "typologies": [
+    {
+      "canonical": "VILLE",
+      "originalTerm": "ville",
+      "originalVocabulary": "world-data.js",
+      "sourceRefs": [
+        "src-project-bruges"
+      ]
+    }
+  ],
+  "category": {
+    "value": "HONEYMOON",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-bruges"
+    ]
+  },
+  "externalIds": {
+    "project:id": "bruges",
+    "pexels:photo": "5612504"
+  },
+  "sources": [
+    {
+      "id": "src-project-bruges",
+      "sourceUrl": null,
+      "sourceType": "PROJECT_FILE",
+      "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "bruges",
+      "status": "CONFIRMÉ",
+      "confidence": 0.85,
+      "locator": "entities[4]"
+    },
+    {
+      "id": "src-pexels-bruges",
+      "sourceUrl": "https://www.pexels.com/photo/canal-and-townhouses-in-old-town-5612504/",
+      "sourceType": "SOURCE_OFFICIELLE",
+      "sourceName": "Pexels",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "pexels:5612504",
+      "status": "SOURCE_OFFICIELLE",
+      "confidence": 0.9,
+      "locator": "media"
+    }
+  ],
+  "media": [
+    {
+      "kind": "IMAGE",
+      "url": "https://images.pexels.com/photos/5612504/pexels-photo-5612504.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "pageUrl": "https://www.pexels.com/photo/canal-and-townhouses-in-old-town-5612504/",
+      "author": "Icarus",
+      "license": "https://www.pexels.com/license/",
+      "subject": "Bruges, Belgique — canal et maisons de la vieille ville",
+      "caption": "Canal et maisons de la vieille ville de Bruges",
+      "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté.",
+      "query": "bruges belgium",
+      "externalId": "pexels:5612504",
+      "nature": "RÉEL",
+      "illustration": true,
+      "source": {
+        "id": "src-pexels-bruges",
+        "sourceUrl": "https://www.pexels.com/photo/canal-and-townhouses-in-old-town-5612504/",
+        "sourceType": "SOURCE_OFFICIELLE",
+        "sourceName": "Pexels",
+        "retrievedAt": "2026-09-23",
+        "updatedAt": null,
+        "externalId": "pexels:5612504",
+        "status": "SOURCE_OFFICIELLE",
+        "confidence": 0.9,
+        "locator": "media"
+      }
+    }
+  ],
+  "contentRefs": [
+    {
+      "ref": "world-data.js#bruges",
+      "kind": "SUJET",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-bruges"
+      ]
+    },
+    {
+      "ref": "world-data.js#bruges",
+      "kind": "ACCROCHE",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-bruges"
+      ]
+    },
+    {
+      "ref": "world-data.js#bruges",
+      "kind": "CONTENU",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-bruges"
+      ]
+    }
+  ],
+  "rendererContracts": {
+    "globe": {
+      "pointId": "bruges",
+      "city": "Bruges",
+      "relationsKeys": [
+        "worldData",
+        "edition",
+        "page",
+        "destination",
+        "story",
+        "wedding"
+      ],
+      "relationsValues": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "discover": {
+        "label": "Découvrir",
+        "kind": "pexels-source",
+        "href": "https://www.pexels.com/photo/canal-and-townhouses-in-old-town-5612504/"
+      }
+    }
+  },
+  "status": "CONFIRMÉ",
+  "createdAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "notes": "Migré depuis world-data.js v2.0.0 (migration déterministe, test aller-retour par globe-adapter)."
+}

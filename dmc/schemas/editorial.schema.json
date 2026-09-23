@@ -1,0 +1,41 @@
+{
+  "$id": "dmc:schema:editorial",
+  "version": "1.0.0",
+  "title": "Document éditorial produit par l'Editorial Engine",
+  "type": "object",
+  "required": ["schemaVersion", "engine", "dmc", "generatedAt", "blocks"],
+  "properties": {
+    "schemaVersion": { "type": "string", "enum": ["1.0.0"] },
+    "engine": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" }
+      }
+    },
+    "dmc": { "$ref": "dmc:schema:dmc-code" },
+    "generatedAt": { "type": "string" },
+    "context": { "type": ["object", "null"] },
+    "blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["block", "nature", "status", "sourceRefs", "data"],
+        "properties": {
+          "block": {
+            "type": "string",
+            "enum": ["COVER", "EDITORIAL", "IMMERSIVE", "MOSAÏQUE", "CHRONIQUE",
+                     "TIMELINE", "CARTE", "DOSSIER", "GALERIE", "MEDIA", "SOURCE",
+                     "RELATIONS"]
+          },
+          "title": { "type": ["string", "null"] },
+          "nature": { "type": "string", "enum": ["RÉEL", "RECONSTITUÉ", "ÉDITORIAL", "À_CONFIRMER"] },
+          "status": { "type": "string", "enum": ["PROPOSÉ", "TROUVÉ", "SOURCE_OFFICIELLE", "CONFIRMÉ", "VÉRIFIÉ", "RÉSERVÉ", "À_CONFIRMER"] },
+          "sourceRefs": { "type": "array", "items": { "type": "string" } },
+          "data": { "type": "object" }
+        }
+      }
+    }
+  }
+}

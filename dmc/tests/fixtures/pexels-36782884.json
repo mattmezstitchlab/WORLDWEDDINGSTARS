@@ -1,0 +1,10 @@
+{
+  "_fixture": "Données RÉELLES déjà présentes dans le projet (world-data.js, entité fes) — réutilisées comme source d'ingestion JSON pour les tests. Rien d'inventé.",
+  "id": 36782884,
+  "url": "https://www.pexels.com/photo/bustling-street-in-fez-medina-morocco-36782884/",
+  "photographer": "Miguel Cuenca",
+  "image": "https://images.pexels.com/photos/36782884/pexels-photo-36782884.jpeg",
+  "description": "Ruelle animée de la médina de Fès",
+  "query": "fez morocco medina",
+  "license": "https://www.pexels.com/license/"
+}

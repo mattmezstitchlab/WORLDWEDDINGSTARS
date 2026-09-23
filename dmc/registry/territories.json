@@ -1,0 +1,89 @@
+{
+  "prefixes": {
+    "FES": {
+      "countryCode": "MA",
+      "territory": "Fès",
+      "allocated": 1
+    },
+    "KAN": {
+      "countryCode": "NG",
+      "territory": "Kano",
+      "allocated": 1
+    },
+    "CAI": {
+      "countryCode": "EG",
+      "territory": "Le Caire",
+      "allocated": 1
+    },
+    "VEN": {
+      "countryCode": "IT",
+      "territory": "Venise",
+      "allocated": 1
+    },
+    "BRU": {
+      "countryCode": "BE",
+      "territory": "Bruges",
+      "allocated": 1
+    },
+    "PAR": {
+      "countryCode": "FR",
+      "territory": "Paris",
+      "allocated": 1
+    },
+    "EDI": {
+      "countryCode": "GB",
+      "territory": "Édimbourg",
+      "allocated": 1
+    },
+    "LUC": {
+      "countryCode": "IN",
+      "territory": "Lucknow",
+      "allocated": 1
+    },
+    "KUT": {
+      "countryCode": "IN",
+      "territory": "Kutch",
+      "allocated": 1
+    },
+    "KYO": {
+      "countryCode": "JP",
+      "territory": "Kyoto",
+      "allocated": 1
+    },
+    "SAM": {
+      "countryCode": "UZ",
+      "territory": "Samarkand",
+      "allocated": 1
+    },
+    "ISF": {
+      "countryCode": "IR",
+      "territory": "Isfahan",
+      "allocated": 1
+    },
+    "HAN": {
+      "countryCode": "VN",
+      "territory": "Hanoï",
+      "allocated": 1
+    },
+    "OAX": {
+      "countryCode": "MX",
+      "territory": "Oaxaca",
+      "allocated": 1
+    },
+    "CUS": {
+      "countryCode": "PE",
+      "territory": "Cusco",
+      "allocated": 1
+    },
+    "CHI": {
+      "countryCode": "GT",
+      "territory": "Chichicastenango",
+      "allocated": 1
+    },
+    "AUC": {
+      "countryCode": "NZ",
+      "territory": "Auckland",
+      "allocated": 1
+    }
+  }
+}

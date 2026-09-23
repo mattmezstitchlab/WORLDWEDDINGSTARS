@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "PROPOSAL",
+  "type": null,
+  "subtype": null,
+  "name": "À CONFIRMER",
+  "aliases": [],
+  "description": {
+    "text": "Ruelle animée de la médina de Fès",
+    "nature": "RÉEL",
+    "status": "TROUVÉ",
+    "sourceRefs": [
+      "src-001-cmba1"
+    ]
+  },
+  "territory": null,
+  "coordinates": {
+    "lat": null,
+    "lon": null,
+    "nature": "RÉEL",
+    "status": "À_CONFIRMER",
+    "absence": "NON_DISPONIBLE",
+    "sourceRefs": []
+  },
+  "typologies": [],
+  "category": null,
+  "externalIds": {},
+  "sources": [
+    {
+      "id": "src-001-cmba1",
+      "sourceUrl": "file:///home/user/WORLDWEDDINGSTARS/dmc/tests/fixtures/pexels-36782884.json",
+      "sourceType": "JSON",
+      "sourceName": "Pexels — métadonnées photo 36782884 (projet)",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": null,
+      "status": "TROUVÉ",
+      "confidence": 0.6,
+      "locator": null
+    }
+  ],
+  "media": [
+    {
+      "kind": "IMAGE",
+      "url": "https://images.pexels.com/photos/36782884/pexels-photo-36782884.jpeg",
+      "pageUrl": "file:///home/user/WORLDWEDDINGSTARS/dmc/tests/fixtures/pexels-36782884.json",
+      "author": "Miguel Cuenca",
+      "license": null,
+      "subject": null,
+      "caption": null,
+      "note": null,
+      "query": null,
+      "externalId": null,
+      "nature": "RÉEL",
+      "illustration": true,
+      "source": {
+        "id": "src-001-cmba1-media-0",
+        "sourceUrl": "file:///home/user/WORLDWEDDINGSTARS/dmc/tests/fixtures/pexels-36782884.json",
+        "sourceType": "JSON",
+        "sourceName": "Pexels — métadonnées photo 36782884 (projet)",
+        "retrievedAt": "2026-09-23",
+        "updatedAt": null,
+        "externalId": null,
+        "status": "TROUVÉ",
+        "confidence": 0.6,
+        "locator": null
+      }
+    }
+  ],
+  "contentRefs": [],
+  "relationsProposees": [],
+  "datesTrouvees": [],
+  "horairesTrouves": [],
+  "prixTrouves": [],
+  "liensTrouves": [
+    {
+      "url": "https://www.pexels.com/photo/bustling-street-in-fez-medina-morocco-36782884/",
+      "text": null
+    }
+  ],
+  "status": "PROPOSÉ",
+  "confidence": 0.4,
+  "missing": [
+    {
+      "field": "name",
+      "absence": "À_CONFIRMER"
+    },
+    {
+      "field": "coordinates",
+      "absence": "NON_DISPONIBLE"
+    },
+    {
+      "field": "territory",
+      "absence": "À_CONFIRMER"
+    },
+    {
+      "field": "territory.countryCode",
+      "absence": "À_CONFIRMER"
+    },
+    {
+      "field": "horaires",
+      "absence": "NON_DISPONIBLE"
+    },
+    {
+      "field": "prices",
+      "absence": "NON_DISPONIBLE"
+    },
+    {
+      "field": "dates",
+      "absence": "NON_DISPONIBLE"
+    }
+  ]
+}

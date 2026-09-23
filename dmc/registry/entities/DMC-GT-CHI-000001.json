@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "dmc": "DMC-GT-CHI-000001",
+  "type": "PLACE",
+  "subtype": "ville",
+  "name": "Chichicastenango",
+  "aliases": [],
+  "description": {
+    "text": "Le marché de Chichicastenango — couleurs du Guatemala",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-chichi"
+    ]
+  },
+  "territory": {
+    "name": "Quiché",
+    "country": "Guatemala",
+    "countryCode": "GT",
+    "region": null
+  },
+  "coordinates": {
+    "lat": 14.94,
+    "lon": -91.11,
+    "nature": "RÉEL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-chichi"
+    ]
+  },
+  "typologies": [
+    {
+      "canonical": "VILLE",
+      "originalTerm": "ville",
+      "originalVocabulary": "world-data.js",
+      "sourceRefs": [
+        "src-project-chichi"
+      ]
+    }
+  ],
+  "category": {
+    "value": "CULTURE",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-chichi"
+    ]
+  },
+  "externalIds": {
+    "project:id": "chichi",
+    "pexels:photo": "11828651"
+  },
+  "sources": [
+    {
+      "id": "src-project-chichi",
+      "sourceUrl": null,
+      "sourceType": "PROJECT_FILE",
+      "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "chichi",
+      "status": "CONFIRMÉ",
+      "confidence": 0.85,
+      "locator": "entities[15]"
+    },
+    {
+      "id": "src-pexels-chichi",
+      "sourceUrl": "https://www.pexels.com/photo/iglesia-de-santo-tomas-chichicastenango-guatemala-11828651/",
+      "sourceType": "SOURCE_OFFICIELLE",
+      "sourceName": "Pexels",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "pexels:11828651",
+      "status": "SOURCE_OFFICIELLE",
+      "confidence": 0.9,
+      "locator": "media"
+    }
+  ],
+  "media": [
+    {
+      "kind": "IMAGE",
+      "url": "https://images.pexels.com/photos/11828651/pexels-photo-11828651.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "pageUrl": "https://www.pexels.com/photo/iglesia-de-santo-tomas-chichicastenango-guatemala-11828651/",
+      "author": "Kelly",
+      "license": "https://www.pexels.com/license/",
+      "subject": "Chichicastenango, Guatemala — église Santo Tomás et marché vus du ciel",
+      "caption": "L'église Santo Tomás et le marché de Chichicastenango, vus du ciel",
+      "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté.",
+      "query": "chichicastenango market",
+      "externalId": "pexels:11828651",
+      "nature": "RÉEL",
+      "illustration": true,
+      "source": {
+        "id": "src-pexels-chichi",
+        "sourceUrl": "https://www.pexels.com/photo/iglesia-de-santo-tomas-chichicastenango-guatemala-11828651/",
+        "sourceType": "SOURCE_OFFICIELLE",
+        "sourceName": "Pexels",
+        "retrievedAt": "2026-09-23",
+        "updatedAt": null,
+        "externalId": "pexels:11828651",
+        "status": "SOURCE_OFFICIELLE",
+        "confidence": 0.9,
+        "locator": "media"
+      }
+    }
+  ],
+  "contentRefs": [
+    {
+      "ref": "world-data.js#chichi",
+      "kind": "SUJET",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-chichi"
+      ]
+    },
+    {
+      "ref": "world-data.js#chichi",
+      "kind": "ACCROCHE",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-chichi"
+      ]
+    },
+    {
+      "ref": "world-data.js#chichi",
+      "kind": "CONTENU",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-chichi"
+      ]
+    }
+  ],
+  "rendererContracts": {
+    "globe": {
+      "pointId": "chichi",
+      "city": "Chichicastenango",
+      "relationsKeys": [
+        "worldData",
+        "edition",
+        "page",
+        "destination",
+        "story",
+        "wedding"
+      ],
+      "relationsValues": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "discover": {
+        "label": "Découvrir",
+        "kind": "pexels-source",
+        "href": "https://www.pexels.com/photo/iglesia-de-santo-tomas-chichicastenango-guatemala-11828651/"
+      }
+    }
+  },
+  "status": "CONFIRMÉ",
+  "createdAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "notes": "Migré depuis world-data.js v2.0.0 (migration déterministe, test aller-retour par globe-adapter)."
+}

@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "dmc": "DMC-NZ-AUC-000001",
+  "type": "PLACE",
+  "subtype": "ville",
+  "name": "Auckland",
+  "aliases": [],
+  "description": {
+    "text": "Lune de miel à Waiheke — vignobles et Pacifique",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-auckland"
+    ]
+  },
+  "territory": {
+    "name": "Tāmaki Makaurau",
+    "country": "Aotearoa / Nouvelle-Zélande",
+    "countryCode": "NZ",
+    "region": null
+  },
+  "coordinates": {
+    "lat": -36.85,
+    "lon": 174.76,
+    "nature": "RÉEL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-auckland"
+    ]
+  },
+  "typologies": [
+    {
+      "canonical": "VILLE",
+      "originalTerm": "ville",
+      "originalVocabulary": "world-data.js",
+      "sourceRefs": [
+        "src-project-auckland"
+      ]
+    }
+  ],
+  "category": {
+    "value": "HONEYMOON",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-auckland"
+    ]
+  },
+  "externalIds": {
+    "project:id": "auckland",
+    "pexels:photo": "35227201"
+  },
+  "sources": [
+    {
+      "id": "src-project-auckland",
+      "sourceUrl": null,
+      "sourceType": "PROJECT_FILE",
+      "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "auckland",
+      "status": "CONFIRMÉ",
+      "confidence": 0.85,
+      "locator": "entities[16]"
+    },
+    {
+      "id": "src-pexels-auckland",
+      "sourceUrl": "https://www.pexels.com/photo/scenic-beach-view-in-auckland-new-zealand-35227201/",
+      "sourceType": "SOURCE_OFFICIELLE",
+      "sourceName": "Pexels",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "pexels:35227201",
+      "status": "SOURCE_OFFICIELLE",
+      "confidence": 0.9,
+      "locator": "media"
+    }
+  ],
+  "media": [
+    {
+      "kind": "IMAGE",
+      "url": "https://images.pexels.com/photos/35227201/pexels-photo-35227201.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "pageUrl": "https://www.pexels.com/photo/scenic-beach-view-in-auckland-new-zealand-35227201/",
+      "author": "Elijah J Cobb",
+      "license": "https://www.pexels.com/license/",
+      "subject": "Auckland, Nouvelle-Zélande — plage et côte verdoyante",
+      "caption": "Plage et côte verdoyante à Auckland, Nouvelle-Zélande",
+      "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté.",
+      "query": "waiheke island",
+      "externalId": "pexels:35227201",
+      "nature": "RÉEL",
+      "illustration": true,
+      "source": {
+        "id": "src-pexels-auckland",
+        "sourceUrl": "https://www.pexels.com/photo/scenic-beach-view-in-auckland-new-zealand-35227201/",
+        "sourceType": "SOURCE_OFFICIELLE",
+        "sourceName": "Pexels",
+        "retrievedAt": "2026-09-23",
+        "updatedAt": null,
+        "externalId": "pexels:35227201",
+        "status": "SOURCE_OFFICIELLE",
+        "confidence": 0.9,
+        "locator": "media"
+      }
+    }
+  ],
+  "contentRefs": [
+    {
+      "ref": "world-data.js#auckland",
+      "kind": "SUJET",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-auckland"
+      ]
+    },
+    {
+      "ref": "world-data.js#auckland",
+      "kind": "ACCROCHE",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-auckland"
+      ]
+    },
+    {
+      "ref": "world-data.js#auckland",
+      "kind": "CONTENU",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-auckland"
+      ]
+    }
+  ],
+  "rendererContracts": {
+    "globe": {
+      "pointId": "auckland",
+      "city": "Auckland",
+      "relationsKeys": [
+        "worldData",
+        "edition",
+        "page",
+        "destination",
+        "story",
+        "wedding"
+      ],
+      "relationsValues": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "discover": {
+        "label": "Découvrir",
+        "kind": "pexels-source",
+        "href": "https://www.pexels.com/photo/scenic-beach-view-in-auckland-new-zealand-35227201/"
+      }
+    }
+  },
+  "status": "CONFIRMÉ",
+  "createdAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "notes": "Migré depuis world-data.js v2.0.0 (migration déterministe, test aller-retour par globe-adapter)."
+}

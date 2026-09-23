@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "dmc": "DMC-EG-CAI-000001",
+  "type": "PLACE",
+  "subtype": "ville",
+  "name": "Le Caire",
+  "aliases": [],
+  "description": {
+    "text": "Pyramides et Nil — patrimoine monumental du mariage",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-caire"
+    ]
+  },
+  "territory": {
+    "name": "Grand Caire",
+    "country": "Égypte",
+    "countryCode": "EG",
+    "region": null
+  },
+  "coordinates": {
+    "lat": 30.04,
+    "lon": 31.24,
+    "nature": "RÉEL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-caire"
+    ]
+  },
+  "typologies": [
+    {
+      "canonical": "VILLE",
+      "originalTerm": "ville",
+      "originalVocabulary": "world-data.js",
+      "sourceRefs": [
+        "src-project-caire"
+      ]
+    }
+  ],
+  "category": {
+    "value": "PATRIMOINE",
+    "nature": "ÉDITORIAL",
+    "status": "CONFIRMÉ",
+    "sourceRefs": [
+      "src-project-caire"
+    ]
+  },
+  "externalIds": {
+    "project:id": "caire",
+    "pexels:photo": "15127135"
+  },
+  "sources": [
+    {
+      "id": "src-project-caire",
+      "sourceUrl": null,
+      "sourceType": "PROJECT_FILE",
+      "sourceName": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "caire",
+      "status": "CONFIRMÉ",
+      "confidence": 0.85,
+      "locator": "entities[2]"
+    },
+    {
+      "id": "src-pexels-caire",
+      "sourceUrl": "https://www.pexels.com/photo/a-silhouette-of-the-pyramids-during-the-golden-hour-15127135/",
+      "sourceType": "SOURCE_OFFICIELLE",
+      "sourceName": "Pexels",
+      "retrievedAt": "2026-09-23",
+      "updatedAt": null,
+      "externalId": "pexels:15127135",
+      "status": "SOURCE_OFFICIELLE",
+      "confidence": 0.9,
+      "locator": "media"
+    }
+  ],
+  "media": [
+    {
+      "kind": "IMAGE",
+      "url": "https://images.pexels.com/photos/15127135/pexels-photo-15127135.jpeg?auto=compress&cs=tinysrgb&w=1000",
+      "pageUrl": "https://www.pexels.com/photo/a-silhouette-of-the-pyramids-during-the-golden-hour-15127135/",
+      "author": "Diego F Parra",
+      "license": "https://www.pexels.com/license/",
+      "subject": "Gizeh, Égypte — pyramides à l'heure dorée",
+      "caption": "Les pyramides de Gizeh à l'heure dorée",
+      "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté.",
+      "query": "giza pyramids cairo",
+      "externalId": "pexels:15127135",
+      "nature": "RÉEL",
+      "illustration": true,
+      "source": {
+        "id": "src-pexels-caire",
+        "sourceUrl": "https://www.pexels.com/photo/a-silhouette-of-the-pyramids-during-the-golden-hour-15127135/",
+        "sourceType": "SOURCE_OFFICIELLE",
+        "sourceName": "Pexels",
+        "retrievedAt": "2026-09-23",
+        "updatedAt": null,
+        "externalId": "pexels:15127135",
+        "status": "SOURCE_OFFICIELLE",
+        "confidence": 0.9,
+        "locator": "media"
+      }
+    }
+  ],
+  "contentRefs": [
+    {
+      "ref": "world-data.js#caire",
+      "kind": "SUJET",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-caire"
+      ]
+    },
+    {
+      "ref": "world-data.js#caire",
+      "kind": "ACCROCHE",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-caire"
+      ]
+    },
+    {
+      "ref": "world-data.js#caire",
+      "kind": "CONTENU",
+      "nature": "ÉDITORIAL",
+      "sourceRefs": [
+        "src-project-caire"
+      ]
+    }
+  ],
+  "rendererContracts": {
+    "globe": {
+      "pointId": "caire",
+      "city": "Le Caire",
+      "relationsKeys": [
+        "worldData",
+        "edition",
+        "page",
+        "destination",
+        "story",
+        "wedding"
+      ],
+      "relationsValues": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "discover": {
+        "label": "Découvrir",
+        "kind": "pexels-source",
+        "href": "https://www.pexels.com/photo/a-silhouette-of-the-pyramids-during-the-golden-hour-15127135/"
+      }
+    }
+  },
+  "status": "CONFIRMÉ",
+  "createdAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "notes": "Migré depuis world-data.js v2.0.0 (migration déterministe, test aller-retour par globe-adapter)."
+}

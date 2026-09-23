@@ -1,0 +1,18 @@
+{
+  "name": "worldweddingstars",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "World Wedding Magazine — La Carte (globe éditorial 17 points) + socle DMC d'absorption éditoriale",
+  "scripts": {
+    "test": "node --test dmc/tests/*.test.mjs",
+    "test:dmc": "node --test dmc/tests/*.test.mjs",
+    "verify:globe": "node tools/verify-points.mjs && node tools/smoke-test.mjs",
+    "verify:dmc": "node dmc/tools/verify-dmc.mjs",
+    "verify": "npm run verify:globe && npm run verify:dmc",
+    "migrate": "node dmc/tools/migrate-world-data.mjs",
+    "migrate:check": "node dmc/tools/migrate-world-data.mjs --check",
+    "ingest": "node dmc/ingest/cli.mjs",
+    "serve": "python3 -m http.server 8080 --bind 0.0.0.0"
+  }
+}

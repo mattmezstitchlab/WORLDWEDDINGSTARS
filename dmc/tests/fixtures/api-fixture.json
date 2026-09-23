@@ -1,0 +1,19 @@
+{
+  "_fixture": "Fixture technique d'API — entité explicitement fictive (aucun lieu réel, wikidata factice). Sert à tester l'extraction JSON, la normalisation typologique et les règles d'absence.",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Entité Fixture API",
+        "category": "centre culturel",
+        "openingHours": "Tu-Sa 12:00-19:00",
+        "price": "5 €",
+        "city": "Villefixture",
+        "date_inauguration": "12/03/2019",
+        "wikidata": "Q00000000"
+      },
+      "geometry": { "type": "Point", "coordinates": [2.5, 48.5] }
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1.0.0",
+  "engine": {
+    "name": "dmc-editorial",
+    "version": "1.0.0"
+  },
+  "dmc": "DMC-MA-FES-000001",
+  "generatedAt": "2026-09-23T00:00:00Z",
+  "context": {
+    "exemple": "dossier-fes",
+    "renderer": "globe"
+  },
+  "blocks": [
+    {
+      "block": "COVER",
+      "nature": "ÉDITORIAL",
+      "status": "CONFIRMÉ",
+      "sourceRefs": [
+        "src-project-fes",
+        "src-pexels-fes"
+      ],
+      "title": null,
+      "data": {
+        "dmc": "DMC-MA-FES-000001",
+        "name": "Fès",
+        "type": "PLACE",
+        "subtype": "ville",
+        "category": "PATRIMOINE",
+        "territory": "Fès-Meknès",
+        "country": "Maroc",
+        "hook": "Se dire oui dans un labyrinthe vieux de mille ans.",
+        "media": {
+          "url": "https://images.pexels.com/photos/36782884/pexels-photo-36782884.jpeg?auto=compress&cs=tinysrgb&w=1000",
+          "caption": "Ruelle animée de la médina de Fès",
+          "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté."
+        }
+      }
+    },
+    {
+      "block": "EDITORIAL",
+      "nature": "ÉDITORIAL",
+      "status": "CONFIRMÉ",
+      "sourceRefs": [
+        "src-project-fes"
+      ],
+      "title": null,
+      "data": {
+        "text": "Fès el-Bali, inscrite au patrimoine mondial de l'UNESCO, est l'une des plus vastes médinas piétonnes au monde. Derrière ses portes de cèdre, des riads à cour de zellige et fontaines murmurent une hospitalité séculaire. Un couple y découvre des toits-terrasses face au coucher du soleil, des artisanats vivants et le rythme lent d'une capitale spirituelle. La négafa, maîtresse de cérémonie, y habille la mariée comme on raconte une histoire de famille.",
+        "ref": "world-data.js#fes"
+      }
+    },
+    {
+      "block": "IMMERSIVE",
+      "nature": "RÉEL",
+      "status": "SOURCE_OFFICIELLE",
+      "sourceRefs": [
+        "src-project-fes",
+        "src-pexels-fes"
+      ],
+      "title": null,
+      "data": {
+        "kind": "IMAGE",
+        "url": "https://images.pexels.com/photos/36782884/pexels-photo-36782884.jpeg?auto=compress&cs=tinysrgb&w=1000",
+        "pageUrl": "https://www.pexels.com/photo/bustling-street-in-fez-medina-morocco-36782884/",
+        "caption": "Ruelle animée de la médina de Fès",
+        "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté.",
+        "author": "Miguel Cuenca",
+        "license": "https://www.pexels.com/license/",
+        "illustration": true,
+        "retrievedAt": "2026-09-23"
+      }
+    },
+    {
+      "block": "CARTE",
+      "nature": "RÉEL",
+      "status": "CONFIRMÉ",
+      "sourceRefs": [
+        "src-project-fes"
+      ],
+      "title": null,
+      "data": {
+        "lat": 34.06,
+        "lon": -4.98,
+        "territory": "Fès-Meknès",
+        "dmc": "DMC-MA-FES-000001"
+      }
+    },
+    {
+      "block": "GALERIE",
+      "nature": "RÉEL",
+      "status": "CONFIRMÉ",
+      "sourceRefs": [
+        "src-project-fes",
+        "src-pexels-fes"
+      ],
+      "title": null,
+      "data": {
+        "items": [
+          {
+            "anchor": "DMC-MA-FES-000001#media-0",
+            "kind": "IMAGE",
+            "url": "https://images.pexels.com/photos/36782884/pexels-photo-36782884.jpeg?auto=compress&cs=tinysrgb&w=1000",
+            "caption": "Ruelle animée de la médina de Fès",
+            "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté.",
+            "author": "Miguel Cuenca",
+            "pageUrl": "https://www.pexels.com/photo/bustling-street-in-fez-medina-morocco-36782884/",
+            "retrievedAt": "2026-09-23"
+          }
+        ]
+      }
+    },
+    {
+      "block": "TIMELINE",
+      "nature": "À_CONFIRMER",
+      "status": "À_CONFIRMER",
+      "sourceRefs": [
+        "src-project-fes",
+        "src-pexels-fes"
+      ],
+      "title": null,
+      "data": {
+        "items": [],
+        "absence": "À_CONFIRMER",
+        "note": "aucun jalon daté sourcé — le moteur ne remplit pas une timeline sans matière réelle"
+      }
+    },
+    {
+      "block": "RELATIONS",
+      "nature": "RECONSTITUÉ",
+      "status": "CONFIRMÉ",
+      "sourceRefs": [
+        "src-project-fes",
+        "src-pexels-fes"
+      ],
+      "title": null,
+      "data": {
+        "items": [
+          {
+            "id": "rel-000001",
+            "type": "ILLUSTRE_PAR",
+            "from": "DMC-MA-FES-000001",
+            "to": "DMC-MA-FES-000001#media-0",
+            "status": "SOURCE_OFFICIELLE",
+            "nature": "RÉEL",
+            "direction": "from"
+          },
+          {
+            "id": "rel-000002",
+            "type": "DECRIT_PAR",
+            "from": "DMC-MA-FES-000001",
+            "to": "world-data.js#fes",
+            "status": "CONFIRMÉ",
+            "nature": "ÉDITORIAL",
+            "direction": "from"
+          }
+        ]
+      }
+    },
+    {
+      "block": "SOURCE",
+      "nature": "RÉEL",
+      "status": "CONFIRMÉ",
+      "sourceRefs": [
+        "src-project-fes",
+        "src-pexels-fes"
+      ],
+      "title": null,
+      "data": {
+        "items": [
+          {
+            "id": "src-project-fes",
+            "name": "world-data.js + index.html (PLACES) — projet World Wedding Stars",
+            "type": "PROJECT_FILE",
+            "url": null,
+            "retrievedAt": "2026-09-23",
+            "status": "CONFIRMÉ",
+            "confidence": 0.85
+          },
+          {
+            "id": "src-pexels-fes",
+            "name": "Pexels",
+            "type": "SOURCE_OFFICIELLE",
+            "url": "https://www.pexels.com/photo/bustling-street-in-fez-medina-morocco-36782884/",
+            "retrievedAt": "2026-09-23",
+            "status": "SOURCE_OFFICIELLE",
+            "confidence": 0.9
+          }
+        ],
+        "media": [
+          {
+            "name": "Pexels",
+            "url": "https://www.pexels.com/photo/bustling-street-in-fez-medina-morocco-36782884/",
+            "pageUrl": "https://www.pexels.com/photo/bustling-street-in-fez-medina-morocco-36782884/",
+            "author": "Miguel Cuenca",
+            "retrievedAt": "2026-09-23",
+            "status": "SOURCE_OFFICIELLE",
+            "license": "https://www.pexels.com/license/",
+            "note": "Vue du lieu — image d'ambiance, aucun mariage réel n'est représenté."
+          }
+        ]
+      }
+    }
+  ]
+}

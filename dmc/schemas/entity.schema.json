@@ -1,0 +1,95 @@
+{
+  "$id": "dmc:schema:entity",
+  "version": "1.0.0",
+  "title": "Entité DMC — une entité réelle, un DMC",
+  "type": "object",
+  "required": ["schemaVersion", "dmc", "type", "name", "sources", "status", "createdAt", "updatedAt"],
+  "properties": {
+    "schemaVersion": { "type": "string", "enum": ["1.0.0"] },
+    "dmc": { "$ref": "dmc:schema:dmc-code" },
+    "type": {
+      "type": "string",
+      "enum": ["PLACE", "PERSON", "ORGANIZATION", "PROFESSIONAL", "EVENT", "ARTICLE",
+               "VIDEO", "IMAGE", "OBJECT", "WEDDING", "COFFRET", "MAGAZINE", "MOTIF",
+               "TERRITORY", "EDITION", "MOMENT"]
+    },
+    "subtype": { "type": ["string", "null"] },
+    "name": { "type": "string" },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "description": {
+      "type": ["object", "null"],
+      "required": ["text", "nature", "status", "sourceRefs"],
+      "properties": {
+        "text": { "type": "string" },
+        "nature": { "type": "string", "enum": ["RÉEL", "RECONSTITUÉ", "ÉDITORIAL"] },
+        "status": { "type": "string", "enum": ["PROPOSÉ", "TROUVÉ", "SOURCE_OFFICIELLE", "CONFIRMÉ", "VÉRIFIÉ", "RÉSERVÉ", "À_CONFIRMER"] },
+        "sourceRefs": { "type": "array", "items": { "type": "string", "pattern": "^src-" } }
+      }
+    },
+    "territory": {
+      "type": ["object", "null"],
+      "required": ["name", "country", "countryCode"],
+      "properties": {
+        "name": { "type": "string" },
+        "country": { "type": "string" },
+        "countryCode": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "region": { "type": ["string", "null"] }
+      }
+    },
+    "coordinates": {
+      "type": ["object", "null"],
+      "required": ["lat", "lon", "nature", "status", "sourceRefs"],
+      "properties": {
+        "lat": { "type": ["number", "null"], "minimum": -90, "maximum": 90 },
+        "lon": { "type": ["number", "null"], "minimum": -180, "maximum": 180 },
+        "nature": { "type": "string", "enum": ["RÉEL", "RECONSTITUÉ", "ÉDITORIAL"] },
+        "status": { "type": "string", "enum": ["PROPOSÉ", "TROUVÉ", "SOURCE_OFFICIELLE", "CONFIRMÉ", "VÉRIFIÉ", "RÉSERVÉ", "À_CONFIRMER"] },
+        "sourceRefs": { "type": "array", "items": { "type": "string", "pattern": "^src-" } }
+      }
+    },
+    "typologies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["canonical", "originalTerm"],
+        "properties": {
+          "canonical": { "type": "string", "pattern": "^[A-Z][A-Z_]+$" },
+          "originalTerm": { "type": "string" },
+          "originalVocabulary": { "type": ["string", "null"] },
+          "sourceRefs": { "type": "array", "items": { "type": "string", "pattern": "^src-" } }
+        }
+      }
+    },
+    "category": {
+      "type": ["object", "null"],
+      "required": ["value", "nature", "status", "sourceRefs"],
+      "properties": {
+        "value": { "type": "string" },
+        "nature": { "type": "string", "enum": ["RÉEL", "RECONSTITUÉ", "ÉDITORIAL"] },
+        "status": { "type": "string", "enum": ["PROPOSÉ", "TROUVÉ", "SOURCE_OFFICIELLE", "CONFIRMÉ", "VÉRIFIÉ", "RÉSERVÉ", "À_CONFIRMER"] },
+        "sourceRefs": { "type": "array", "items": { "type": "string", "pattern": "^src-" } }
+      }
+    },
+    "externalIds": { "type": "object" },
+    "sources": { "type": "array", "items": { "$ref": "dmc:schema:source" } },
+    "media": { "type": "array", "items": { "$ref": "dmc:schema:media" } },
+    "contentRefs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ref", "kind", "nature"],
+        "properties": {
+          "ref": { "type": "string" },
+          "kind": { "type": "string", "enum": ["ACCROCHE", "CONTENU", "SUJET", "ARTICLE", "FICHE", "AUTRE"] },
+          "nature": { "type": "string", "enum": ["RÉEL", "RECONSTITUÉ", "ÉDITORIAL"] },
+          "sourceRefs": { "type": "array", "items": { "type": "string", "pattern": "^src-" } }
+        }
+      }
+    },
+    "rendererContracts": { "type": ["object", "null"] },
+    "status": { "type": "string", "enum": ["PROPOSÉ", "TROUVÉ", "SOURCE_OFFICIELLE", "CONFIRMÉ", "VÉRIFIÉ", "RÉSERVÉ", "À_CONFIRMER"] },
+    "createdAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "updatedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "notes": { "type": ["string", "null"] }
+  }
+}
