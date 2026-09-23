@@ -347,6 +347,87 @@
   #composeSelection{border:1px solid rgba(244,239,228,.22);background:transparent;color:var(--paper);padding:8px 10px;font-size:7px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;white-space:nowrap;}
   @media(max-width:900px){#coffretGrid{padding:16px;grid-template-columns:repeat(2,minmax(0,1fr));}.coffret-head{padding:0 16px}.book-cover{grid-template-columns:1fr;aspect-ratio:auto;max-height:78vh;overflow:auto}.book-page{min-height:250px}.book-page:nth-child(2){min-height:250px}.rainbow-tool::after{right:48px}.assembler-label{display:none;}}
 
+
+  /* ---------- WORLD DESK / UNIVERSAL DOCUMENT WORKSPACE ---------- */
+  #worldDesk{position:fixed;inset:0;z-index:95;display:none;background:#07090d;color:#f4efe4;overflow:hidden;}
+  #worldDesk.on{display:block;}
+  .desk-shell{position:absolute;inset:0;display:grid;grid-template-columns:58px 1fr 310px;grid-template-rows:58px 1fr 70px;}
+  .desk-top{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid rgba(244,239,228,.09);background:rgba(7,9,13,.88);backdrop-filter:blur(18px);}
+  .desk-brand{display:flex;align-items:center;gap:10px;}
+  .desk-brand .mini-ring{width:18px;height:18px;border-radius:50%;border:2px solid transparent;background:linear-gradient(#07090d,#07090d) padding-box,conic-gradient(#ff3b30,#ff9500,#ffcc00,#34c759,#00c7be,#007aff,#5856d6,#af52de,#ff2d55,#ff3b30) border-box;}
+  .desk-brand span{font-size:8px;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,239,228,.55);}
+  .desk-top-actions{display:flex;gap:7px;align-items:center;}
+  .desk-close,.desk-action{border:1px solid rgba(244,239,228,.13);background:transparent;color:#f4efe4;padding:8px 11px;font-size:8px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;}
+  .desk-close:hover,.desk-action:hover{border-color:rgba(201,162,75,.65);color:#c9a24b;}
+  .desk-dock{grid-column:1;grid-row:2/4;border-right:1px solid rgba(244,239,228,.08);display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 0;background:#090b10;}
+  .desk-dock-item{position:relative;width:42px;height:42px;border:0;background:transparent;color:rgba(244,239,228,.48);display:grid;place-items:center;cursor:pointer;}
+  .desk-dock-item svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round;}
+  .desk-dock-item:hover,.desk-dock-item.on{color:#f4efe4;}
+  .desk-dock-item.on::before{content:"";position:absolute;left:0;top:9px;bottom:9px;width:2px;background:#c9a24b;}
+  .desk-dock-item::after{content:attr(aria-label);position:absolute;left:48px;top:50%;transform:translateY(-50%);white-space:nowrap;background:#11141b;border:1px solid rgba(244,239,228,.12);padding:7px 9px;color:#f4efe4;font-size:7px;letter-spacing:.15em;text-transform:uppercase;opacity:0;pointer-events:none;transition:.18s;z-index:4;}
+  .desk-dock-item:hover::after{opacity:1;}
+  .desk-stage{grid-column:2;grid-row:2;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(57,65,82,.22),transparent 42%),#080a0f;}
+  .desk-stage::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(244,239,228,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(244,239,228,.025) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(180deg,rgba(0,0,0,.55),transparent 88%);pointer-events:none;}
+  .desk-canvas-label{position:absolute;left:22px;top:18px;font-size:7px;letter-spacing:.28em;text-transform:uppercase;color:rgba(244,239,228,.35);}
+  #deskObjects{position:absolute;inset:0;display:grid;place-items:center;}
+  .desk-empty{max-width:360px;text-align:center;color:rgba(244,239,228,.38);}
+  .desk-empty .empty-ring{width:68px;height:68px;border-radius:50%;margin:0 auto 16px;border:3px solid transparent;background:linear-gradient(#080a0f,#080a0f) padding-box,conic-gradient(#ff3b30,#ff9500,#ffcc00,#34c759,#00c7be,#007aff,#5856d6,#af52de,#ff2d55,#ff3b30) border-box;box-shadow:0 0 50px rgba(150,100,255,.15);}
+  .desk-empty strong{display:block;font:400 27px/1 'Cormorant Garamond',serif;color:#f4efe4;margin-bottom:8px;}
+  .desk-empty span{font-size:9px;line-height:1.7;}
+  .desk-object{position:absolute;width:210px;background:#10131a;border:1px solid rgba(244,239,228,.1);box-shadow:0 20px 55px rgba(0,0,0,.38);cursor:pointer;transition:.25s;overflow:hidden;}
+  .desk-object:hover,.desk-object.selected{border-color:rgba(201,162,75,.62);transform:translateY(-4px);}
+  .desk-object-media{height:128px;background:linear-gradient(135deg,#202938,#795f4c,#bca16b);display:grid;place-items:center;color:rgba(255,255,255,.7);font-size:8px;letter-spacing:.18em;text-transform:uppercase;}
+  .desk-object-media img{width:100%;height:100%;object-fit:cover;}
+  .desk-object-body{padding:11px;}
+  .desk-object-type{font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:#c9a24b;}
+  .desk-object-title{font:400 20px/1.05 'Cormorant Garamond',serif;margin-top:5px;}
+  .desk-object-meta{font-size:7px;color:#7e8592;margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .desk-inspector{grid-column:3;grid-row:2;background:#0c0f15;border-left:1px solid rgba(244,239,228,.08);padding:22px;overflow:auto;}
+  .desk-inspector .eyebrow{font-size:7px;letter-spacing:.25em;text-transform:uppercase;color:#c9a24b;}
+  .desk-inspector h3{font:400 30px/1 'Cormorant Garamond',serif;margin:8px 0 10px;}
+  .desk-inspector p{font-size:9px;line-height:1.75;color:#8e95a2;}
+  .desk-inspector-grid{display:grid;gap:9px;margin-top:18px;}
+  .desk-field{padding:10px;border:1px solid rgba(244,239,228,.08);background:rgba(244,239,228,.025);}
+  .desk-field small{display:block;font-size:6px;letter-spacing:.18em;text-transform:uppercase;color:#747b89;margin-bottom:4px;}
+  .desk-field strong{font-size:9px;font-weight:400;color:#e7e1d5;}
+  .desk-inspector-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px;}
+  .desk-inspector-actions button{border:1px solid rgba(244,239,228,.13);background:transparent;color:#ddd7cc;padding:8px 9px;font-size:7px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;}
+  .desk-inspector-actions button:hover{border-color:#c9a24b;color:#c9a24b;}
+  .desk-bottom{grid-column:2/4;grid-row:3;border-top:1px solid rgba(244,239,228,.09);display:flex;align-items:center;gap:10px;padding:10px 18px;background:rgba(9,11,16,.94);backdrop-filter:blur(18px);}
+  #deskPlus{width:44px;height:44px;border-radius:50%;border:2px solid transparent;background:linear-gradient(#090b10,#090b10) padding-box,conic-gradient(#ff3b30,#ff9500,#ffcc00,#34c759,#00c7be,#007aff,#5856d6,#af52de,#ff2d55,#ff3b30) border-box;color:#f4efe4;display:grid;place-items:center;font-size:22px;cursor:pointer;box-shadow:0 0 22px rgba(160,100,255,.15);}
+  #deskPlus:hover{transform:scale(1.06);box-shadow:0 0 34px rgba(160,100,255,.28);}
+  .desk-search{flex:1;height:42px;background:rgba(244,239,228,.035);border:1px solid rgba(244,239,228,.11);color:#f4efe4;padding:0 13px;outline:none;font:300 10px Inter,sans-serif;}
+  .desk-search::placeholder{color:#5f6673;}
+  #deskStatus{font-size:7px;letter-spacing:.12em;text-transform:uppercase;color:#6e7582;min-width:150px;text-align:right;}
+  #deskImportMenu{position:absolute;right:18px;bottom:64px;width:270px;background:#0e1118;border:1px solid rgba(244,239,228,.13);box-shadow:0 25px 70px rgba(0,0,0,.55);padding:10px;display:none;z-index:8;}
+  #deskImportMenu.on{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+  .desk-import-item{border:1px solid rgba(244,239,228,.08);background:rgba(244,239,228,.03);color:#e5dfd5;padding:12px 10px;text-align:left;cursor:pointer;}
+  .desk-import-item:hover{border-color:rgba(201,162,75,.55);color:#c9a24b;}
+  .desk-import-item b{display:block;font-size:9px;font-weight:400;}
+  .desk-import-item small{display:block;margin-top:4px;font-size:6px;letter-spacing:.1em;color:#737a87;text-transform:uppercase;}
+  #deskFileInput{display:none;}
+  #deskScan{position:absolute;inset:0;z-index:20;display:none;place-items:center;background:rgba(5,7,10,.82);backdrop-filter:blur(7px);}
+  #deskScan.on{display:grid;}
+  .scan-core{width:min(430px,80vw);text-align:center;}
+  .scan-orbit{width:110px;height:110px;border-radius:50%;margin:0 auto 20px;border:1px solid rgba(244,239,228,.16);position:relative;display:grid;place-items:center;}
+  .scan-orbit::before,.scan-orbit::after{content:"";position:absolute;inset:13px;border:1px solid rgba(201,162,75,.28);border-radius:50%;animation:deskOrbit 2s linear infinite;}
+  .scan-orbit::after{inset:28px;border-color:rgba(120,120,255,.24);animation-duration:1.25s;animation-direction:reverse;}
+  .scan-point{width:10px;height:10px;border-radius:50%;background:#c9a24b;box-shadow:0 0 28px #c9a24b;animation:deskPulse .75s ease-in-out infinite alternate;}
+  .scan-points{position:absolute;inset:0;}
+  .scan-points i{position:absolute;width:4px;height:4px;border-radius:50%;background:#f4efe4;opacity:.7;animation:deskFloat 1.5s ease-in-out infinite;}
+  .scan-title{font:400 27px/1 'Cormorant Garamond',serif;}
+  .scan-sub{margin-top:8px;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#858c99;}
+  .scan-log{margin-top:14px;font-size:8px;line-height:1.8;color:#c9a24b;min-height:42px;}
+  @keyframes deskOrbit{to{transform:rotate(360deg)}} @keyframes deskPulse{to{transform:scale(1.45);filter:brightness(1.35)}} @keyframes deskFloat{0%,100%{transform:translate(0,0);opacity:.25}50%{transform:translate(12px,-8px);opacity:1}}
+  @media(max-width:900px){
+    .desk-shell{grid-template-columns:48px 1fr;grid-template-rows:52px 1fr 68px;}
+    .desk-top{padding:0 11px;}
+    .desk-inspector{position:absolute;right:0;top:52px;bottom:68px;width:min(310px,88vw);z-index:6;transform:translateX(100%);transition:.25s;}
+    .desk-inspector.open{transform:translateX(0);}
+    .desk-bottom{grid-column:2;}.desk-object{width:175px;}.desk-object-media{height:105px;}
+    .desk-search{display:none;}#deskStatus{display:none;}#deskImportMenu{right:10px;}
+  }
+
 </style>
 </head>
 <body>
@@ -426,6 +507,38 @@
 </div>
 
 <div id="assemblerTray" aria-hidden="true"><span class="assembler-label">Assemblage</span><div id="assemblerItems"></div><button id="composeSelection">Déplier l’édition</button></div>
+
+
+<div id="worldDesk" aria-hidden="true">
+  <div class="desk-shell">
+    <div class="desk-top">
+      <div class="desk-brand"><span class="mini-ring"></span><span>World Desk · bureau du monde</span></div>
+      <div class="desk-top-actions"><button class="desk-action" id="deskInspectorToggle">Inspecteur</button><button class="desk-close" id="deskClose">Fermer</button></div>
+    </div>
+    <aside class="desk-dock" id="deskDock">
+      <button class="desk-dock-item on" data-desk-filter="all" aria-label="Tout"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></button>
+      <button class="desk-dock-item" data-desk-filter="image" aria-label="Photos"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"/><circle cx="9" cy="10" r="1.4"/><path d="m5 17 4.5-4.5 3 3 2.2-2.2L19 17"/></svg></button>
+      <button class="desk-dock-item" data-desk-filter="video" aria-label="Vidéos"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"/><path d="m10 9 5 3-5 3Z"/></svg></button>
+      <button class="desk-dock-item" data-desk-filter="document" aria-label="Documents"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v5h4M9 13h6M9 16h6"/></svg></button>
+      <button class="desk-dock-item" data-desk-filter="finance" aria-label="Devis & factures"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h5M8 16h8"/></svg></button>
+      <button class="desk-dock-item" data-desk-filter="data" aria-label="Données CSV"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"/><path d="M5 10h14M5 15h14M10 5v14M15 5v14"/></svg></button>
+      <button class="desk-dock-item" data-desk-filter="message" aria-label="SMS & captures"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></button>
+      <button class="desk-dock-item" data-desk-filter="audio" aria-label="Audio"><svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg></button>
+    </aside>
+    <main class="desk-stage"><span class="desk-canvas-label">Bureau · espace de travail</span><div id="deskObjects"><div class="desk-empty"><div class="empty-ring"></div><strong>Déposez le monde ici.</strong><span>Photos, vidéos, documents, devis, factures, SMS ou données deviennent des objets reliés.</span></div></div>
+      <div id="deskScan"><div class="scan-core"><div class="scan-orbit"><div class="scan-point"></div><div class="scan-points"></div></div><div class="scan-title" id="scanTitle">Analyse du document</div><div class="scan-sub" id="scanSub">Cartographie des informations</div><div class="scan-log" id="scanLog"></div></div></div>
+    </main>
+    <aside class="desk-inspector" id="deskInspector"><div class="eyebrow">Objet sélectionné</div><h3 id="deskInspectorTitle">Aucun objet</h3><p id="deskInspectorIntro">Sélectionnez un élément pour révéler sa structure, ses informations et ses relations.</p><div class="desk-inspector-grid" id="deskInspectorGrid"></div><div class="desk-inspector-actions"><button id="deskLink">Associer</button><button id="deskAssemble">Assembler</button><button id="deskOpen">Ouvrir</button></div></aside>
+    <footer class="desk-bottom"><button id="deskPlus" aria-label="Importer">+</button><input class="desk-search" id="deskSearch" placeholder="Rechercher dans le bureau…"><span id="deskStatus">0 objet</span><div id="deskImportMenu">
+      <button class="desk-import-item" data-import="document"><b>PDF / document</b><small>contrat · devis · facture</small></button>
+      <button class="desk-import-item" data-import="image"><b>Photo / capture</b><small>image · SMS · screenshot</small></button>
+      <button class="desk-import-item" data-import="video"><b>Vidéo</b><small>film · rush · souvenir</small></button>
+      <button class="desk-import-item" data-import="data"><b>CSV / données</b><small>table · export · contacts</small></button>
+      <button class="desk-import-item" data-import="audio"><b>Audio</b><small>voix · musique · note</small></button>
+      <button class="desk-import-item" data-import="url"><b>URL</b><small>page · source · média</small></button>
+    </div><input id="deskFileInput" type="file" accept="*/*"></footer>
+  </div>
+</div>
 
 <div id="coffretExplorer" aria-hidden="true">
   <div class="coffret-head"><div><div class="eyebrow">World Wedding Stars · territoire pilote</div><h3>365 coffrets · Lille Métropole</h3></div><button id="closeCoffretExplorer">Fermer ×</button></div>
@@ -1313,6 +1426,79 @@ async function universalSearch(){
 }
 document.getElementById("sourceSearchBtn").addEventListener("click",universalSearch);
 document.getElementById("universalSearch").addEventListener("keydown",e=>{if(e.key==="Enter")universalSearch();});
+
+
+/* ---------- WORLD DESK ENGINE ---------- */
+const deskObjects=[];
+let deskSelected=null;
+const deskSeed=[
+  {type:"image",title:"Lille · Gare Saint-Sauveur",meta:"photo · inspiration · lieu",fields:[["Type","Image"],["Lieu","Lille · France"],["Relation","Coffret C-042"]]},
+  {type:"video",title:"Cérémonie · 00:42:18",meta:"vidéo · Jour J",fields:[["Type","Vidéo"],["Moment","Cérémonie"],["Durée","00:42:18"]]},
+  {type:"finance",title:"Devis · Traiteur",meta:"PDF · 1 250 €",fields:[["Type","Devis"],["Montant","1 250 €"],["Statut","À confirmer"]]},
+  {type:"document",title:"Planning · Jour J",meta:"document · Timeline",fields:[["Type","Document"],["Pages","8"],["Relation","Mariage"]]}
+];
+function deskRender(filter="all"){
+  const box=document.getElementById("deskObjects"); if(!box)return;
+  box.querySelectorAll(".desk-object").forEach(x=>x.remove());
+  const items=deskObjects.filter(x=>filter==="all"||x.type===filter);
+  if(!items.length){ if(!deskObjects.length) box.querySelector(".desk-empty")?.removeAttribute("hidden"); return; }
+  box.querySelector(".desk-empty")?.setAttribute("hidden","true");
+  items.forEach((o,i)=>{
+    const el=document.createElement("article"); el.className="desk-object"+(o===deskSelected?" selected":""); el.dataset.index=deskObjects.indexOf(o);
+    el.style.left=(12+(i%3)*30)+"%"; el.style.top=(12+Math.floor(i/3)*37)+"%";
+    el.innerHTML='<div class="desk-object-media">'+(o.preview?'<img src="'+o.preview+'" alt="">':(o.type==="video"?"▶ VIDÉO":o.type==="document"||o.type==="finance"?"▱ DOCUMENT":"✦ OBJET"))+'</div><div class="desk-object-body"><div class="desk-object-type">'+escapeHtml(o.type)+'</div><div class="desk-object-title">'+escapeHtml(o.title)+'</div><div class="desk-object-meta">'+escapeHtml(o.meta||"Objet du monde")+'</div></div>';
+    el.addEventListener("click",()=>deskSelect(o)); box.appendChild(el);
+  });
+  document.getElementById("deskStatus").textContent=deskObjects.length+" objet"+(deskObjects.length>1?"s":"");
+}
+function deskSelect(o){
+  deskSelected=o; document.querySelectorAll(".desk-object").forEach(x=>x.classList.toggle("selected",Number(x.dataset.index)===deskObjects.indexOf(o)));
+  document.getElementById("deskInspectorTitle").textContent=o.title;
+  document.getElementById("deskInspectorIntro").textContent="Objet structuré · les relations peuvent être enrichies sans changer de bureau.";
+  document.getElementById("deskInspectorGrid").innerHTML=(o.fields||[]).map(f=>'<div class="desk-field"><small>'+escapeHtml(f[0])+'</small><strong>'+escapeHtml(f[1])+'</strong></div>').join("");
+  if(window.innerWidth<900)document.getElementById("deskInspector").classList.add("open");
+}
+function deskOpenImport(type){
+  document.getElementById("deskImportMenu").classList.remove("on");
+  if(type==="url"){
+    const url=prompt("URL à importer"); if(url) deskAnalyze({name:url,type:"url",size:0});
+    return;
+  }
+  const input=document.getElementById("deskFileInput"); input.value=""; input.accept=type==="image"?"image/*":type==="video"?"video/*":type==="audio"?"audio/*":type==="data"?".csv,.tsv,text/csv":type==="document"?".pdf,.doc,.docx,.txt": "*/*"; input.click();
+}
+document.getElementById("deskPlus").addEventListener("click",()=>document.getElementById("deskImportMenu").classList.toggle("on"));
+document.querySelectorAll(".desk-import-item").forEach(b=>b.addEventListener("click",()=>deskOpenImport(b.dataset.import)));
+document.getElementById("deskFileInput").addEventListener("change",e=>{const f=e.target.files&&e.target.files[0];if(f)deskAnalyze(f);});
+async function deskAnalyze(file){
+  const scan=document.getElementById("deskScan"),log=document.getElementById("scanLog");
+  scan.classList.add("on"); document.getElementById("scanTitle").textContent=file.name||"Nouvel objet";
+  const steps=["Réception de l'objet","Lecture des métadonnées","Cartographie des éléments","Structuration des informations"];
+  for(let i=0;i<steps.length;i++){log.textContent=steps[i]+"…";await new Promise(r=>setTimeout(r,480));}
+  const name=file.name||file.type||"Objet importé", lower=name.toLowerCase(), type=file.type||"";
+  let category=type.startsWith("image/")?"image":type.startsWith("video/")?"video":type.startsWith("audio/")?"audio":(lower.endsWith(".csv")||lower.endsWith(".tsv"))?"data":(lower.includes("facture")||lower.includes("devis"))?"finance":"document";
+  let preview=null;
+  if(category==="image"&&file instanceof File){try{preview=URL.createObjectURL(file);}catch(_){}}
+  let fields=[["Source",name],["Type",category==="finance"?"Devis / facture":category],["Analyse","Structure prête à compléter"],["Statut","À confirmer"]];
+  if(category==="data")fields.push(["Données","CSV / tableau détecté"]);
+  if(category==="image")fields.push(["Vision","Image importée · OCR à connecter"]);
+  if(category==="document")fields.push(["Texte","Extraction à connecter"]);
+  if(category==="video")fields.push(["Média","Vidéo importée"]);
+  if(category==="audio")fields.push(["Audio","Piste importée"]);
+  if(category==="finance")fields.push(["Montant","À extraire"]);
+  const obj={type:category,title:name.replace(/\.[^.]+$/,""),meta:(file.type||"fichier")+" · "+Math.max(1,Math.round((file.size||0)/1024))+" KB",fields,preview};
+  deskObjects.unshift(obj); deskSelected=obj; deskRender(); deskSelect(obj);
+  log.textContent="Objet structuré · données non confirmées";
+  setTimeout(()=>scan.classList.remove("on"),650);
+}
+document.querySelectorAll(".desk-dock-item").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".desk-dock-item").forEach(x=>x.classList.remove("on"));b.classList.add("on");deskRender(b.dataset.deskFilter);}));
+document.getElementById("deskSearch").addEventListener("input",e=>{const q=e.target.value.toLowerCase();document.querySelectorAll(".desk-object").forEach(x=>x.style.display=x.textContent.toLowerCase().includes(q)?"":"none");});
+document.getElementById("deskInspectorToggle").addEventListener("click",()=>document.getElementById("deskInspector").classList.toggle("open"));
+document.getElementById("deskClose").addEventListener("click",()=>{document.getElementById("worldDesk").classList.remove("on");document.getElementById("worldDesk").setAttribute("aria-hidden","true");});
+document.getElementById("deskAssemble").addEventListener("click",()=>{if(deskSelected){addAssembly("desk",deskSelected.title);document.getElementById("worldDesk").classList.remove("on");}});
+document.getElementById("deskOpen").addEventListener("click",()=>deskSelected&&deskSelect(deskSelected));
+document.getElementById("deskLink").addEventListener("click",()=>{if(deskSelected){deskSelected.fields.push(["Relation","À associer au Monde"]);deskSelect(deskSelected);}});
+function openWorldDesk(){document.getElementById("worldDesk").classList.add("on");document.getElementById("worldDesk").setAttribute("aria-hidden","false");if(!deskObjects.length){deskObjects.push(...deskSeed);}deskRender();}
+document.getElementById("deskInspector").addEventListener("click",e=>e.stopPropagation());
 
 })();
 </script>
