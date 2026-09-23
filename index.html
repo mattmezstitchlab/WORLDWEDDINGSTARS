@@ -1501,6 +1501,7 @@ document.getElementById("deskLink").addEventListener("click",()=>{if(deskSelecte
 function openWorldDesk(){document.getElementById("worldDesk").classList.add("on");document.getElementById("worldDesk").setAttribute("aria-hidden","false");if(!deskObjects.length){deskObjects.push(...deskSeed);}deskRender();}
 document.getElementById("deskInspector").addEventListener("click",e=>e.stopPropagation());
 
+document.getElementById("openWorldDesk")?.addEventListener("click",openWorldDesk);
 })();
 </script>
 </body>
