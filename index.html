@@ -97,6 +97,103 @@
     #hint{display:none;}
     .crumb{padding:6px 6px;font-size:7.5px;}
   }
+
+  /* ---------- MODE WORKSPACES: MAGAZINE / STUDIO ---------- */
+  #magazineMode,#studioMode{position:fixed;inset:0;z-index:80;display:none;background:var(--paper);color:#171717;}
+  body.mode-magazine #magazineMode,body.mode-studio #studioMode{display:block;}
+  body.mode-magazine #scene,body.mode-magazine #panel,body.mode-magazine #rail,body.mode-magazine #crumbs,
+  body.mode-magazine #hint,body.mode-magazine #progress,body.mode-magazine .rule{display:none!important;}
+  body.mode-studio #scene,body.mode-studio #panel,body.mode-studio #rail,body.mode-studio #crumbs,
+  body.mode-studio #hint,body.mode-studio #progress,body.mode-studio .rule{display:none!important;}
+  body.mode-magazine{background:var(--paper);overflow:hidden;}
+  body.mode-studio{background:#0d0f14;overflow:hidden;}
+
+  .workspace-head{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;border-bottom:1px solid rgba(20,20,20,.12);background:rgba(244,239,228,.96);position:relative;z-index:3;}
+  .workspace-head .eyebrow{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8b6b2d;}
+  .workspace-head h3{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:500;margin-top:3px;}
+  .workspace-actions{display:flex;align-items:center;gap:8px;}
+  .workspace-btn{border:1px solid rgba(20,20,20,.18);background:transparent;padding:9px 12px;font:500 9px Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;color:#222;}
+  .workspace-btn:hover,.workspace-btn.active{background:#171717;color:#f4efe4;}
+  .workspace-close{border:0;background:transparent;font-size:20px;cursor:pointer;padding:8px;color:#555;}
+
+  /* Magazine */
+  #magazineViewport{height:calc(100vh - 72px);overflow:auto;padding:42px 5vw 70px;scroll-behavior:smooth;}
+  #magazinePages{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;}
+  .mag-page{background:#fffdf8;min-height:620px;border:1px solid rgba(30,25,15,.1);box-shadow:0 18px 55px rgba(20,16,8,.09);padding:46px;display:flex;flex-direction:column;position:relative;overflow:hidden;}
+  .mag-page.cover-page{background:#161a22;color:#f4efe4;justify-content:space-between;}
+  .mag-page .page-meta{font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:#a4864a;}
+  .mag-page h4{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:42px;line-height:.98;margin:22px 0 16px;}
+  .mag-page p{font-size:12px;line-height:1.8;color:#666;max-width:48ch;}
+  .cover-page p{color:#bfc2c8;}
+  .mag-media{margin:24px -4px 0;min-height:240px;background:linear-gradient(135deg,#222b3b,#8b6b3c 55%,#d7c28c);position:relative;display:flex;align-items:flex-end;padding:18px;color:#fff;}
+  .mag-media::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.58));}
+  .mag-media .media-label{position:relative;z-index:1;font-size:8px;letter-spacing:.24em;text-transform:uppercase;}
+  .mag-video{cursor:pointer;}
+  .mag-video .play{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border:1px solid rgba(255,255,255,.8);border-radius:50%;display:grid;place-items:center;font-size:17px;}
+  .mag-video:hover .play{background:rgba(255,255,255,.16);}
+  .mag-page .page-no{margin-top:auto;padding-top:25px;font-size:8px;letter-spacing:.2em;color:#aaa;}
+  #magPageNav{position:fixed;right:22px;bottom:18px;z-index:4;display:flex;gap:6px;background:rgba(244,239,228,.92);padding:6px;border:1px solid rgba(20,20,20,.12);}
+  #magPageNav button{border:0;background:transparent;padding:8px 10px;cursor:pointer;font-size:11px;}
+  #magPageNav .count{font:500 8px Inter,sans-serif;letter-spacing:.18em;min-width:75px;}
+
+  /* Studio */
+  #studioMode{background:#0d0f14;color:#f4efe4;}
+  .studio-head{background:#11141b;color:#f4efe4;border-color:rgba(244,239,228,.1);}
+  .studio-head .workspace-btn{color:#e7e1d5;border-color:rgba(244,239,228,.18);}
+  .studio-head .workspace-btn:hover,.studio-head .workspace-btn.active{background:#f4efe4;color:#11141b;}
+  #studioCanvas{height:calc(100vh - 72px);display:grid;grid-template-rows:minmax(0,1fr) 210px;}
+  #studioPreviewArea{position:relative;min-height:0;display:grid;grid-template-columns:1fr 250px;gap:18px;padding:22px;background:#090b10;}
+  #studioPreview{position:relative;min-width:0;min-height:0;display:grid;place-items:center;background:#151923;overflow:hidden;border:1px solid rgba(244,239,228,.09);}
+  #studioFrame{width:min(72vw,720px);aspect-ratio:4/3;background:#f4efe4;color:#171717;box-shadow:0 20px 70px rgba(0,0,0,.4);position:relative;overflow:hidden;transition:transform .25s ease;}
+  #studioFrame .frame-media{position:absolute;inset:9% 9% 28%;background:linear-gradient(135deg,#2a3346,#9e6b49 55%,#d7bd83);overflow:hidden;}
+  #studioFrame .frame-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.28));}
+  #studioFrame .frame-kicker{position:absolute;left:9%;top:6%;font-size:7px;letter-spacing:.3em;text-transform:uppercase;color:#8b6b2d;}
+  #studioFrame h5{position:absolute;left:9%;right:9%;bottom:10%;font:400 34px/1 Cormorant Garamond,serif;}
+  #studioFrame .frame-page{position:absolute;right:9%;bottom:5%;font-size:8px;letter-spacing:.2em;color:#888;}
+  #studioSelection{position:absolute;inset:0;border:1px solid rgba(201,162,75,.85);pointer-events:none;display:none;}
+  #studioSelection.on{display:block;}
+  #studioSelection span{position:absolute;width:8px;height:8px;background:#c9a24b;}
+  #studioSelection span:nth-child(1){left:-4px;top:-4px}.#studioSelection span:nth-child(2){right:-4px;top:-4px}
+  #studioSelection span:nth-child(3){left:-4px;bottom:-4px}.#studioSelection span:nth-child(4){right:-4px;bottom:-4px}
+  #studioInspector{border-left:1px solid rgba(244,239,228,.08);padding:8px 0 8px 18px;}
+  #studioInspector .ins-title{font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:#c9a24b;margin-bottom:18px;}
+  #studioInspector h4{font:400 25px/1 Cormorant Garamond,serif;margin-bottom:8px;}
+  #studioInspector p{font-size:10px;line-height:1.7;color:#8f96a5;}
+  .tool-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;}
+  .tool{font:500 8px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#dfe2e8;background:#151923;border:1px solid rgba(244,239,228,.12);padding:8px 9px;cursor:pointer;}
+  .tool:hover,.tool.on{background:#c9a24b;color:#111;border-color:#c9a24b;}
+  .zoom-row{display:flex;align-items:center;gap:8px;margin-top:18px;font-size:8px;letter-spacing:.12em;color:#7f8796;}
+  #studioZoom{width:100%;accent-color:#c9a24b;}
+  #studioTimelineArea{background:#11141b;border-top:1px solid rgba(244,239,228,.08);position:relative;padding:18px 22px 12px;}
+  .timeline-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+  .timeline-top span{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:#8f96a5;}
+  #studioPlan{display:flex;gap:5px;}
+  .plan{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#8f96a5;border:1px solid rgba(244,239,228,.1);padding:6px 9px;cursor:pointer;}
+  .plan.on{color:#111;background:#c9a24b;border-color:#c9a24b;}
+  #timelineViewport{overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;padding:6px 0 15px;}
+  #studioTimeline{display:flex;align-items:center;gap:8px;min-width:max-content;padding:0 25vw;}
+  .tl-item{width:104px;height:72px;border:1px solid rgba(244,239,228,.12);background:#171b24;display:flex;flex-direction:column;justify-content:space-between;padding:8px;cursor:pointer;flex:none;transition:.2s;}
+  .tl-item:hover{border-color:rgba(201,162,75,.55);}
+  .tl-item.on{border-color:#c9a24b;box-shadow:0 0 0 1px #c9a24b inset;}
+  .tl-thumb{height:31px;background:linear-gradient(135deg,#273247,#8c684b,#c9a24b);}
+  .tl-meta{font-size:7px;letter-spacing:.12em;color:#9299a7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .timeline-center{position:absolute;top:47px;bottom:10px;left:50%;width:1px;background:#c9a24b;opacity:.75;pointer-events:none;}
+  .studio-help{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#676f7e;}
+
+  @media(max-width:900px){
+    .workspace-head{height:62px;padding:0 16px;}
+    .workspace-head h3{font-size:21px;}
+    .workspace-head .eyebrow{display:none;}
+    #magazineViewport{height:calc(100vh - 62px);padding:20px 14px 80px;}
+    #magazinePages{grid-template-columns:1fr;gap:16px;}
+    .mag-page{min-height:560px;padding:30px;}
+    #studioCanvas{height:calc(100vh - 62px);grid-template-rows:minmax(0,1fr) 190px;}
+    #studioPreviewArea{grid-template-columns:1fr;padding:12px;}
+    #studioInspector{display:none;}
+    #studioFrame{width:90vw;}
+    #studioTimelineArea{padding:12px 10px;}
+  }
+
 </style>
 </head>
 <body>
@@ -140,6 +237,51 @@
 
 <div id="crumbs"></div>
 <div id="hint">Glisser pour tourner · Molette pour plonger</div>
+
+
+<div id="magazineMode" aria-label="Magazine">
+  <div class="workspace-head">
+    <div><div class="eyebrow">World Wedding Magazine · Édition du jour</div><h3>Magazine</h3></div>
+    <div class="workspace-actions">
+      <button class="workspace-btn active" data-mode="magazine">Magazine</button>
+      <button class="workspace-btn" data-mode="studio">Studio</button>
+      <button class="workspace-btn" data-mode="globe">Globe</button>
+      <button class="workspace-close" data-mode="globe" aria-label="Fermer">×</button>
+    </div>
+  </div>
+  <div id="magazineViewport"><div id="magazinePages"></div></div>
+  <div id="magPageNav"><button id="magPrev">←</button><button class="count" id="magCount">01 / 24</button><button id="magNext">→</button></div>
+</div>
+
+<div id="studioMode" aria-label="Studio">
+  <div class="workspace-head studio-head">
+    <div><div class="eyebrow">World Wedding Magazine · Workspace</div><h3>Studio</h3></div>
+    <div class="workspace-actions">
+      <button class="workspace-btn" data-mode="magazine">Magazine</button>
+      <button class="workspace-btn active" data-mode="studio">Studio</button>
+      <button class="workspace-btn" data-mode="globe">Globe</button>
+      <button class="workspace-close" data-mode="globe" aria-label="Fermer">×</button>
+    </div>
+  </div>
+  <div id="studioCanvas">
+    <div id="studioPreviewArea">
+      <div id="studioPreview">
+        <div id="studioFrame"><div class="frame-kicker">World Wedding Magazine · Édition 001</div><div class="frame-media"></div><h5 id="studioTitle">La main avant la robe</h5><div class="frame-page" id="studioPageNo">PAGE 01</div><div id="studioSelection"><span></span><span></span><span></span><span></span></div></div>
+      </div>
+      <aside id="studioInspector">
+        <div class="ins-title">Sélection</div><h4 id="insTitle">Page 01</h4><p id="insText">Cliquez sur un élément de la Timeline pour centrer automatiquement la vue et synchroniser le Preview.</p>
+        <div class="tool-row">
+          <button class="tool" data-tool="fit">Ajuster</button><button class="tool" data-tool="crop">Recadrer</button><button class="tool" data-tool="position">Position</button><button class="tool" data-tool="zoom">Zoom</button><button class="tool" data-tool="reset">Réinitialiser</button>
+        </div>
+        <div class="zoom-row"><span>−</span><input id="studioZoom" type="range" min="0.7" max="1.8" step=".01" value="1"><span>+</span></div>
+      </aside>
+    </div>
+    <div id="studioTimelineArea">
+      <div class="timeline-top"><div id="studioPlan"><button class="plan on" data-plan="global">Global</button><button class="plan" data-plan="section">Section</button><button class="plan" data-plan="element">Élément</button></div><span class="studio-help">Cliquez = sélectionner · molette = zoom · glisser = parcourir</span></div>
+      <div id="timelineViewport"><div id="studioTimeline"></div></div><div class="timeline-center"></div>
+    </div>
+  </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
@@ -538,6 +680,126 @@ function animate(){
   renderer.render(scene,camera);
 }
 animate();
+
+/* ---------- WORKSPACE MODES ---------- */
+const WORK_PAGES=[
+ ["Couverture","Le monde est la table des matières","Une édition mondiale du mariage, pensée comme un objet éditorial vivant.","COUVERTURE"],
+ ["Édito","24 heures · 24 chapitres","Chaque journée devient une édition. Chaque page possède son rythme, son image et son mouvement.","ÉDITORIAL"],
+ ["Tendance","Les gestes qui reviennent","Matières, silhouettes, fleurs et gestes : une sélection internationale.","TENDANCE"],
+ ["Lieu","Choisir un lieu qui raconte","Une réception n'est pas seulement un décor. Elle devient le premier chapitre de l'histoire.","LIEU"],
+ ["Mode","La robe comme paysage","Silhouette, matière, mouvement : la mode du mariage traitée comme une image éditoriale.","MODE"],
+ ["Costume","Le détail avant l'ensemble","Textures, coupes, accessoires et gestes du matin.","STYLE"],
+ ["Décoration","La table comme scène","Lumière, fleurs, matières et composition racontent déjà la soirée.","DÉCORATION"],
+ ["Fleurs","Une saison en mouvement","Bouquets, installations et détails botaniques.","FLORAL"],
+ ["Gastronomie","Le goût du jour","Tables, gestes de service et traditions culinaires.","GASTRONOMIE"],
+ ["Musique","La bande-son du mariage","Entrée, dîner, danse : chaque moment possède son tempo.","MUSIQUE"],
+ ["Photographie","Le moment suspendu","Le regard du photographe devient une page du magazine.","PHOTO"],
+ ["Vidéo","Le mariage en mouvement","Une séquence vidéo peut occuper une double page et devenir un chapitre vivant.","FILM"],
+ ["Cérémonie","Avant le premier oui","Le temps se ralentit. Les gestes prennent toute leur importance.","CÉRÉMONIE"],
+ ["Famille","Ceux qui font l'histoire","Portraits, transmission et souvenirs.","FAMILLE"],
+ ["Culture","Mariages du monde","Des traditions différentes, une même fonction : transmettre une histoire.","CULTURE"],
+ ["Inspiration","Un détail suffit","Une couleur, une matière, un objet : parfois une seule idée déclenche tout.","INSPIRATION"],
+ ["Destination","Partir pour se marier","Les lieux deviennent des personnages.","DESTINATION"],
+ ["Histoire","Le fil qui traverse le temps","Cinq chapitres, une mémoire et des générations.","HISTOIRE"],
+ ["Prestataires","Les mains derrière le jour J","Photographes, musiciens, traiteurs, créateurs et autres métiers.","PROFESSIONNELS"],
+ ["Technologie","Le mariage connecté","Outils, partage et nouvelles formes de mémoire.","TECHNOLOGIE"],
+ ["Invités","Le mariage vu de l'intérieur","Les personnes présentes deviennent elles aussi des fragments du magazine.","INVITÉS"],
+ ["Après","Ce qui reste","Photos, films, musique et souvenirs continuent après le jour J.","APRÈS"],
+ ["Sélection","Les essentiels de l'édition","Une sélection courte de contenus à conserver.","SÉLECTION"],
+ ["Dernière page","À demain","Le magazine se termine. Le monde continue.","FIN"]
+];
+let workMode="globe",magPage=0,studioPage=0,studioZoom=1;
+
+function enterWorkspace(next){
+  workMode=next;
+  document.body.classList.toggle("mode-magazine",next==="magazine");
+  document.body.classList.toggle("mode-studio",next==="studio");
+  document.querySelectorAll("[data-mode]").forEach(b=>b.classList.toggle("active",b.dataset.mode===next));
+  if(next==="globe"){ workMode="globe"; return; }
+  if(next==="magazine") renderMagazine();
+  if(next==="studio") renderStudio();
+}
+document.querySelectorAll("[data-mode]").forEach(b=>b.addEventListener("click",()=>enterWorkspace(b.dataset.mode)));
+document.querySelectorAll("nav a").forEach(a=>{
+  const label=a.textContent.trim().toLowerCase();
+  if(label.includes("édition")) a.addEventListener("click",e=>{e.preventDefault();enterWorkspace("magazine");});
+  if(label.includes("atlas")) a.addEventListener("click",e=>{e.preventDefault();enterWorkspace("globe");});
+});
+/* Make the top navigation explicit without adding another competing system. */
+const nav=document.querySelector("nav");
+nav.innerHTML='<a href="#" data-mode="magazine">Magazine</a><a href="#" data-mode="studio">Studio</a><a href="#" data-mode="globe">Globe</a><a href="#">Atlas</a>';
+nav.querySelectorAll("[data-mode]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();enterWorkspace(a.dataset.mode);}));
+
+function renderMagazine(){
+  const root=document.getElementById("magazinePages");
+  root.innerHTML=WORK_PAGES.map((p,i)=>{
+    const video=(i===11||i===21);
+    return '<article class="mag-page '+(i===0?'cover-page':'')+'" id="mag-page-'+i+'">'+
+      '<div><div class="page-meta">'+p[3]+' · '+String(i+1).padStart(2,"0")+' / 24</div>'+
+      '<h4>'+p[0]+'</h4><p>'+p[2]+'</p>'+
+      (video?'<a class="mag-media mag-video" href="https://www.pexels.com/search/videos/wedding/" target="_blank" rel="noopener"><span class="play">▶</span><span class="media-label">VIDÉO · SOURCE PEXELS</span></a>':
+      '<div class="mag-media"><span class="media-label">IMAGE ÉDITORIALE</span></div>')+
+      '</div><div class="page-no">WORLD WEDDING MAGAZINE · ÉDITION 001 · '+String(i+1).padStart(2,"0")+'</div></article>';
+  }).join("");
+  document.getElementById("magCount").textContent=String(magPage+1).padStart(2,"0")+" / 24";
+}
+function goMagPage(delta){
+  magPage=Math.max(0,Math.min(23,magPage+delta));
+  document.getElementById("mag-page-"+magPage)?.scrollIntoView({behavior:"smooth",block:"center"});
+  document.getElementById("magCount").textContent=String(magPage+1).padStart(2,"0")+" / 24";
+}
+document.getElementById("magPrev").onclick=()=>goMagPage(-1);
+document.getElementById("magNext").onclick=()=>goMagPage(1);
+document.getElementById("magazineViewport").addEventListener("scroll",()=>{
+  const pages=[...document.querySelectorAll(".mag-page")], mid=innerHeight*.55;
+  let best=0,bestD=Infinity;
+  pages.forEach((p,i)=>{const d=Math.abs(p.getBoundingClientRect().top+innerHeight*.25-mid);if(d<bestD){bestD=d;best=i;}});
+  magPage=best;document.getElementById("magCount").textContent=String(best+1).padStart(2,"0")+" / 24";
+});
+
+function centerStudioItem(i){
+  studioPage=i;
+  const item=document.querySelector('.tl-item[data-index="'+i+'"]');
+  item?.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
+  const p=WORK_PAGES[i];
+  document.getElementById("studioTitle").textContent=p[0];
+  document.getElementById("studioPageNo").textContent="PAGE "+String(i+1).padStart(2,"0");
+  document.getElementById("insTitle").textContent="Page "+String(i+1).padStart(2,"0")+" · "+p[0];
+  document.getElementById("insText").textContent=p[2]+" La vue, le Preview et les outils sont maintenant synchronisés sur cette sélection.";
+  document.querySelectorAll(".tl-item").forEach(x=>x.classList.toggle("on",Number(x.dataset.index)===i));
+  document.getElementById("studioSelection").classList.add("on");
+}
+function renderStudio(){
+  const tl=document.getElementById("studioTimeline");
+  tl.innerHTML=WORK_PAGES.map((p,i)=>'<button class="tl-item '+(i===studioPage?'on':'')+'" data-index="'+i+'"><span class="tl-thumb"></span><span class="tl-meta">'+String(i+1).padStart(2,"0")+' · '+p[0]+'</span></button>').join("");
+  tl.querySelectorAll(".tl-item").forEach(x=>x.addEventListener("click",()=>centerStudioItem(Number(x.dataset.index))));
+  requestAnimationFrame(()=>centerStudioItem(studioPage));
+}
+document.querySelectorAll(".plan").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".plan").forEach(x=>x.classList.remove("on"));b.classList.add("on");
+  const vp=document.getElementById("timelineViewport");
+  if(b.dataset.plan==="global"){vp.scrollTo({left:document.getElementById("studioTimeline").scrollWidth/2-vp.clientWidth/2,behavior:"smooth"});}
+  if(b.dataset.plan==="section"){centerStudioItem(Math.max(0,studioPage-2));}
+  if(b.dataset.plan==="element"){document.getElementById("studioSelection").classList.add("on");}
+}));
+document.getElementById("studioZoom").addEventListener("input",e=>{
+  studioZoom=Number(e.target.value);document.getElementById("studioFrame").style.transform="scale("+studioZoom+")";
+});
+document.querySelectorAll(".tool").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".tool").forEach(x=>x.classList.remove("on"));b.classList.add("on");
+  const frame=document.getElementById("studioFrame");
+  if(b.dataset.tool==="fit"){studioZoom=1;document.getElementById("studioZoom").value=1;frame.style.transform="scale(1)";}
+  if(b.dataset.tool==="zoom"){studioZoom=Math.min(1.8,studioZoom+.15);document.getElementById("studioZoom").value=studioZoom;frame.style.transform="scale("+studioZoom+")";}
+  if(b.dataset.tool==="crop"){frame.querySelector(".frame-media").style.transform="scale(1.12)";}
+  if(b.dataset.tool==="position"){frame.querySelector(".frame-media").style.transform="translateY(-4%)";}
+  if(b.dataset.tool==="reset"){studioZoom=1;document.getElementById("studioZoom").value=1;frame.style.transform="scale(1)";frame.querySelector(".frame-media").style.transform="none";}
+}));
+document.getElementById("timelineViewport").addEventListener("wheel",e=>{
+  if(workMode!=="studio")return;
+  if(e.ctrlKey){e.preventDefault();const z=document.getElementById("studioZoom");z.value=Math.max(.7,Math.min(1.8,Number(z.value)+(e.deltaY>0?-.05:.05)));z.dispatchEvent(new Event("input"));return;}
+  document.getElementById("timelineViewport").scrollLeft+=e.deltaY+e.deltaX;
+},{passive:false});
+
 })();
 </script>
 </body>
