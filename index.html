@@ -194,6 +194,40 @@
     #studioTimelineArea{padding:12px 10px;}
   }
 
+
+  /* ---------- UNIVERSAL SOURCE SEARCH ---------- */
+  .universal-search{margin-top:24px;pointer-events:auto;width:min(520px,calc(100vw - 68px));}
+  .universal-search label{display:block;font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .source-search-row{display:flex;gap:6px;}
+  #universalSearch{flex:1;min-width:0;background:rgba(11,14,20,.72);border:1px solid rgba(244,239,228,.25);color:var(--paper);padding:12px 13px;font:300 11px Inter,sans-serif;outline:none;backdrop-filter:blur(12px);}
+  #universalSearch::placeholder{color:rgba(244,239,228,.38);}
+  #universalSearch:focus{border-color:rgba(201,162,75,.75);}
+  #sourceSearchBtn{border:1px solid var(--gold);background:var(--gold);color:#111;padding:0 15px;font:500 8px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;}
+  #sourceSearchStatus{margin-top:8px;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,239,228,.48);min-height:12px;}
+  #sourceLayer{position:fixed;inset:0;z-index:36;pointer-events:none;}
+  .source-point{position:absolute;pointer-events:auto;transform:translate(-50%,-50%);cursor:pointer;}
+  .source-point .dot{width:11px;height:11px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(201,162,75,.12),0 0 26px rgba(201,162,75,.35);transition:.25s;}
+  .source-point:hover .dot,.source-point.selected .dot{transform:scale(1.55);box-shadow:0 0 0 8px rgba(201,162,75,.14),0 0 34px rgba(201,162,75,.5);}
+  .source-point .source-card{position:absolute;left:16px;top:-8px;width:230px;padding:12px;background:rgba(11,14,20,.94);border:1px solid rgba(201,162,75,.35);backdrop-filter:blur(14px);opacity:0;transform:translateY(5px);transition:.2s;color:var(--paper);}
+  .source-point:hover .source-card,.source-point.selected .source-card{opacity:1;transform:translateY(0);}
+  .source-card .source-rank{font-size:7px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;}
+  .source-card strong{display:block;font:500 15px/1.1 'Cormorant Garamond',serif;margin:5px 0;}
+  .source-card span{display:block;font-size:8px;line-height:1.5;color:rgba(244,239,228,.55);}
+  .source-card a{display:inline-block;margin-top:8px;color:var(--gold);font-size:7px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;}
+  #sourceResults{position:fixed;right:28px;top:50%;transform:translateY(-50%);width:270px;max-height:58vh;overflow:auto;z-index:37;pointer-events:auto;display:none;background:rgba(11,14,20,.9);border:1px solid rgba(201,162,75,.25);backdrop-filter:blur(16px);padding:14px;}
+  #sourceResults.on{display:block;}
+  .source-results-head{font-size:8px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+  .source-result{padding:10px 0;border-top:1px solid rgba(244,239,228,.08);}
+  .source-result b{display:block;font:500 15px/1.15 'Cormorant Garamond',serif;}
+  .source-result small{display:block;margin-top:4px;color:#858b98;font-size:8px;line-height:1.5;}
+  .source-result a{display:inline-block;margin-top:6px;color:var(--gold);font-size:7px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;}
+  .source-result .score{float:right;color:var(--gold);font-size:7px;letter-spacing:.12em;}
+  @media(max-width:900px){
+    .universal-search{width:calc(100vw - 44px);margin-top:16px;}
+    #sourceResults{left:14px;right:14px;top:auto;bottom:74px;transform:none;width:auto;max-height:34vh;}
+    .source-point .source-card{left:12px;width:190px;}
+  }
+
 </style>
 </head>
 <body>
@@ -223,6 +257,21 @@
     <button class="btn primary" id="down">Plonger ↓</button>
     <button class="btn" id="up">Remonter ↑</button>
   </div>
+  
+<div class="universal-search">
+  <label for="universalSearch">Chercher dans le monde</label>
+  <div class="source-search-row">
+    <input id="universalSearch" autocomplete="off" placeholder="Mariage à Kyoto, jazz, photographie, une personne…" />
+    <button id="sourceSearchBtn">Explorer</button>
+  </div>
+  <div id="sourceSearchStatus"></div>
+</div>
+<div id="sourceLayer" aria-live="polite"></div>
+<aside id="sourceResults">
+  <div class="source-results-head">Sources sélectionnées</div>
+  <div id="sourceResultsList"></div>
+</aside>
+
 </div>
 
 <div id="rail">
@@ -799,6 +848,77 @@ document.getElementById("timelineViewport").addEventListener("wheel",e=>{
   if(e.ctrlKey){e.preventDefault();const z=document.getElementById("studioZoom");z.value=Math.max(.7,Math.min(1.8,Number(z.value)+(e.deltaY>0?-.05:.05)));z.dispatchEvent(new Event("input"));return;}
   document.getElementById("timelineViewport").scrollLeft+=e.deltaY+e.deltaX;
 },{passive:false});
+
+
+/* ---------- UNIVERSAL WEB SOURCE ENGINE ---------- */
+const SOURCE_FALLBACKS=[
+  {title:"Wikimedia Commons",domain:"commons.wikimedia.org",url:"https://commons.wikimedia.org/",snippet:"Images, vidéos et médias documentés du monde entier.",tags:["image","photo","video","art","mariage"]},
+  {title:"UNESCO",domain:"unesco.org",url:"https://www.unesco.org/",snippet:"Culture, patrimoine, traditions et connaissances internationales.",tags:["culture","patrimoine","tradition","monde"]},
+  {title:"Wikipedia",domain:"wikipedia.org",url:"https://www.wikipedia.org/",snippet:"Articles encyclopédiques et références sur des sujets du monde entier.",tags:["monde","histoire","personne","lieu"]},
+  {title:"Wikidata",domain:"wikidata.org",url:"https://www.wikidata.org/",snippet:"Base de connaissances structurée pour relier personnes, lieux, œuvres et concepts.",tags:["personne","lieu","art","science","monde"]},
+  {title:"Pexels",domain:"pexels.com",url:"https://www.pexels.com/",snippet:"Photographies et vidéos libres d'utilisation pour nourrir les pages éditoriales.",tags:["photo","video","mariage","mode","voyage"]},
+  {title:"The Knot",domain:"theknot.com",url:"https://www.theknot.com/",snippet:"Ressources éditoriales autour du mariage, des prestataires et de l'organisation.",tags:["mariage","wedding","robe","lieu","prestataire"]}
+];
+
+function scoreSource(item,q){
+  const text=(item.title+" "+item.snippet+" "+(item.tags||[]).join(" ")).toLowerCase();
+  const words=q.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(w=>w.length>2);
+  let score=42;
+  words.forEach(w=>{if(text.includes(w))score+=12;});
+  if(item.domain.includes("wikipedia")||item.domain.includes("wikidata")||item.domain.includes("unesco"))score+=8;
+  if(item.snippet&&item.snippet.length>60)score+=3;
+  return Math.min(98,score);
+}
+function renderSourceResults(results,q){
+  const list=document.getElementById("sourceResultsList"), layer=document.getElementById("sourceLayer");
+  list.innerHTML=""; layer.innerHTML="";
+  results.forEach((r,i)=>{
+    r.score=scoreSource(r,q);
+    const li=document.createElement("div");li.className="source-result";
+    li.innerHTML='<span class="score">'+r.score+'% · SOURCE</span><b>'+escapeHtml(r.title)+'</b><small>'+escapeHtml(r.domain)+' · '+escapeHtml(r.snippet||"Source web sélectionnée.")+'</small><a href="'+r.url+'" target="_blank" rel="noopener">Ouvrir la source ↗</a>';
+    list.appendChild(li);
+    const p=document.createElement("div");p.className="source-point";p.style.left=(38+(i%4)*16)+"%";p.style.top=(27+Math.floor(i/4)*23+(i%2)*4)+"%";
+    p.innerHTML='<div class="dot"></div><div class="source-card"><div class="source-rank">POINT '+String(i+1).padStart(2,"0")+' · '+r.score+'%</div><strong>'+escapeHtml(r.title)+'</strong><span>'+escapeHtml(r.domain)+' · '+escapeHtml(r.snippet||"Source web sélectionnée.")+'</span><a href="'+r.url+'" target="_blank" rel="noopener">Voir la source ↗</a></div>';
+    p.addEventListener("click",()=>{document.querySelectorAll(".source-point").forEach(x=>x.classList.remove("selected"));p.classList.add("selected");});
+    layer.appendChild(p);
+  });
+  document.getElementById("sourceResults").classList.add("on");
+  document.getElementById("sourceSearchStatus").textContent=results.length+" sources retenues · triées par pertinence éditoriale";
+}
+function escapeHtml(s){return String(s).replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));}
+
+async function universalSearch(){
+  const input=document.getElementById("universalSearch"), q=input.value.trim();
+  if(!q)return;
+  const status=document.getElementById("sourceSearchStatus");
+  status.textContent="Recherche des meilleures sources…";
+  document.getElementById("sourceResults").classList.add("on");
+  try{
+    const url="https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch="+encodeURIComponent(q)+"&srlimit=8&format=json&origin=*";
+    const data=await fetch(url).then(r=>{if(!r.ok)throw new Error("search");return r.json();});
+    const hits=(data.query&&data.query.search)||[];
+    let results=hits.map(h=>({
+      title:h.title,
+      domain:"en.wikipedia.org",
+      url:"https://en.wikipedia.org/wiki/"+encodeURIComponent(h.title.replace(/ /g,"_")),
+      snippet:(h.snippet||"").replace(/<[^>]+>/g,""),
+      tags:[q]
+    }));
+    if(results.length<4){
+      const fallback=SOURCE_FALLBACKS.filter(x=>x.tags.some(t=>q.toLowerCase().includes(t)||t.includes(q.toLowerCase())));
+      results=results.concat(fallback);
+    }
+    if(!results.length)results=SOURCE_FALLBACKS.slice(0,6);
+    results=results.map(x=>({...x,score:scoreSource(x,q)})).sort((a,b)=>b.score-a.score).slice(0,8);
+    renderSourceResults(results,q);
+  }catch(err){
+    const results=SOURCE_FALLBACKS.map(x=>({...x,score:scoreSource(x,q)})).sort((a,b)=>b.score-a.score).slice(0,6);
+    renderSourceResults(results,q);
+    status.textContent="Recherche web indisponible · univers de sources de secours affiché";
+  }
+}
+document.getElementById("sourceSearchBtn").addEventListener("click",universalSearch);
+document.getElementById("universalSearch").addEventListener("keydown",e=>{if(e.key==="Enter")universalSearch();});
 
 })();
 </script>
