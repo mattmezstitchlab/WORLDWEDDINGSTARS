@@ -228,6 +228,75 @@
     .source-point .source-card{left:12px;width:190px;}
   }
 
+
+  /* ---------- SINGLE WEDDING INTERFACE ---------- */
+  header{z-index:50;}
+  header nav{display:none!important;}
+  .header-provider{pointer-events:auto;border:1px solid rgba(201,162,75,.7);background:rgba(11,14,20,.46);color:var(--paper);padding:10px 14px;font:500 8px Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(10px);transition:.25s;}
+  .header-provider:hover{background:var(--gold);color:#111;border-color:var(--gold);}
+  .rule{display:none;}
+
+  /* The old bottom breadcrumb container becomes invisible: the interface is now spatial. */
+  #crumbs{display:none!important;}
+
+  /* Wedding tool rails: no enclosing rectangle, only pictograms. */
+  .wedding-tools{position:fixed;top:50%;transform:translateY(-50%);z-index:45;display:flex;flex-direction:column;gap:12px;pointer-events:auto;}
+  #weddingToolsLeft{left:22px;}
+  #weddingToolsRight{right:22px;}
+  .wedding-tool{position:relative;width:42px;height:42px;border:0;background:transparent;color:rgba(244,239,228,.62);display:grid;place-items:center;cursor:pointer;padding:0;transition:.25s;}
+  .wedding-tool svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round;transition:.25s;}
+  .wedding-tool:hover,.wedding-tool.on{color:var(--gold);transform:scale(1.08);}
+  .wedding-tool::after{content:attr(aria-label);position:absolute;top:50%;transform:translateY(-50%);opacity:0;pointer-events:none;white-space:nowrap;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--paper);background:rgba(11,14,20,.88);padding:7px 9px;backdrop-filter:blur(10px);transition:.2s;}
+  #weddingToolsLeft .wedding-tool::after{left:50px;}
+  #weddingToolsRight .wedding-tool::after{right:50px;}
+  .wedding-tool:hover::after,.wedding-tool.on::after{opacity:1;}
+
+  /* The only persistent bottom control is the universal wedding field. */
+  .universal-search{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:48;width:min(720px,calc(100vw - 150px));margin:0;padding:0;pointer-events:auto;}
+  .universal-search label{display:none;}
+  .source-search-row{gap:8px;}
+  #universalSearch{height:48px;background:rgba(11,14,20,.62);border:1px solid rgba(244,239,228,.22);padding:0 16px;font-size:11px;backdrop-filter:blur(18px);}
+  #sourceSearchBtn{min-width:92px;}
+  #sourceSearchStatus{text-align:center;margin-top:6px;font-size:7px;}
+  #sourceResults{right:82px;}
+
+  /* Unified action drawer: forms live inside the same interface. */
+  #actionDrawer{position:fixed;inset:0;z-index:90;display:none;pointer-events:none;}
+  #actionDrawer.on{display:block;pointer-events:auto;}
+  .action-backdrop{position:absolute;inset:0;background:rgba(3,5,9,.46);backdrop-filter:blur(5px);}
+  .action-panel{position:absolute;right:22px;top:84px;bottom:22px;width:min(430px,calc(100vw - 44px));background:rgba(11,14,20,.96);border:1px solid rgba(244,239,228,.13);box-shadow:0 25px 80px rgba(0,0,0,.42);padding:24px;overflow:auto;}
+  .action-close{position:absolute;right:15px;top:13px;border:0;background:transparent;color:rgba(244,239,228,.65);font-size:22px;cursor:pointer;}
+  .action-kicker{font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);}
+  .action-panel h3{font:400 30px/1 'Cormorant Garamond',serif;margin:8px 0 8px;}
+  .action-panel .action-intro{font-size:10px;line-height:1.7;color:rgba(244,239,228,.55);margin-bottom:18px;}
+  .action-links{display:grid;gap:7px;margin-bottom:20px;}
+  .action-link{width:100%;text-align:left;border:1px solid rgba(244,239,228,.11);background:rgba(244,239,228,.035);color:var(--paper);padding:11px 12px;font:500 8px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;}
+  .action-link:hover,.action-link.active{border-color:rgba(201,162,75,.6);color:var(--gold);}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+  .form-field{display:flex;flex-direction:column;gap:5px;}
+  .form-field.full{grid-column:1/-1;}
+  .form-field label{font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,239,228,.45);}
+  .form-field input,.form-field textarea,.form-field select{width:100%;border:1px solid rgba(244,239,228,.13);background:rgba(244,239,228,.045);color:var(--paper);padding:10px;font:300 10px Inter,sans-serif;outline:none;}
+  .form-field textarea{min-height:72px;resize:vertical;}
+  .form-field input:focus,.form-field textarea:focus,.form-field select:focus{border-color:rgba(201,162,75,.65);}
+  .form-submit{margin-top:15px;width:100%;border:1px solid var(--gold);background:var(--gold);color:#111;padding:12px;font:500 8px Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;}
+  .form-note{font-size:7px;line-height:1.6;color:rgba(244,239,228,.38);margin-top:9px;}
+  @media(max-width:900px){
+    .header-provider{padding:9px 10px;font-size:7px;}
+    .wedding-tools{gap:5px;top:auto;bottom:91px;transform:none;flex-direction:row;}
+    #weddingToolsLeft{left:12px;}
+    #weddingToolsRight{right:12px;}
+    .wedding-tool{width:34px;height:34px;}
+    .wedding-tool svg{width:18px;height:18px;}
+    .wedding-tool::after{display:none;}
+    .universal-search{width:calc(100vw - 24px);bottom:14px;}
+    #universalSearch{height:44px;}
+    #sourceResults{left:14px;right:14px;bottom:132px;}
+    .action-panel{top:18px;right:12px;bottom:12px;width:calc(100vw - 24px);}
+    .form-grid{grid-template-columns:1fr;}
+    .form-field.full{grid-column:auto;}
+  }
+
 </style>
 </head>
 <body>
@@ -239,12 +308,7 @@
     <h1>World <em>Wedding</em> Magazine</h1>
     <span>La carte est la couverture — Édition N°001</span>
   </div>
-  <nav>
-    <a href="#">Éditions</a>
-    <a href="#">Coffretwedding</a>
-    <a href="#">Universalbroderie</a>
-    <a href="#">Atlas</a>
-  </nav>
+  <button class="header-provider" id="providerSignupTop">Vous êtes prestataire ? Créez votre fiche</button>
 </header>
 <div class="rule"></div>
 <div id="progress"><i id="pbar"></i></div>
@@ -285,6 +349,43 @@
 </div>
 
 <div id="crumbs"></div>
+
+<div id="weddingToolsLeft" class="wedding-tools" aria-label="Outils mariage">
+  <button class="wedding-tool" data-wtool="weddings" aria-label="Mariages" title="Mariages">
+    <svg viewBox="0 0 24 24"><path d="M8.5 6.5a3 3 0 1 0-3 3"/><path d="M15.5 6.5a3 3 0 1 1 3 3"/><path d="M5.5 20v-2.2A3.8 3.8 0 0 1 9.3 14h5.4a3.8 3.8 0 0 1 3.8 3.8V20"/><path d="M9 10.2h6"/><path d="M12 8v4.5"/></svg>
+  </button>
+  <button class="wedding-tool" data-wtool="destinations" aria-label="Destinations" title="Destinations">
+    <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.2"/></svg>
+  </button>
+  <button class="wedding-tool" data-wtool="inspiration" aria-label="Inspiration" title="Inspiration">
+    <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"/><circle cx="9" cy="10" r="1.5"/><path d="m5 17 4.5-4.5 3 3 2.2-2.2L19 17"/></svg>
+  </button>
+</div>
+
+<div id="weddingToolsRight" class="wedding-tools" aria-label="Outils mariage">
+  <button class="wedding-tool" data-wtool="people" aria-label="Personnes" title="Personnes">
+    <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M14 16.5a4.5 4.5 0 0 1 6.5 2.5"/></svg>
+  </button>
+  <button class="wedding-tool" data-wtool="music" aria-label="Musique" title="Musique">
+    <svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
+  </button>
+  <button class="wedding-tool" data-wtool="day" aria-label="Jour J" title="Jour J">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3.5 2"/><path d="M8 3v2M16 3v2"/></svg>
+  </button>
+</div>
+
+<div id="actionDrawer" aria-hidden="true">
+  <div class="action-backdrop" id="actionBackdrop"></div>
+  <section class="action-panel" role="dialog" aria-modal="true">
+    <button class="action-close" id="actionClose" aria-label="Fermer">×</button>
+    <div class="action-kicker" id="actionKicker">Monde du mariage</div>
+    <h3 id="actionTitle">Mariages</h3>
+    <p class="action-intro" id="actionIntro">Explorer le monde du mariage depuis une seule interface.</p>
+    <div class="action-links" id="actionLinks"></div>
+    <div id="actionForm"></div>
+  </section>
+</div>
+
 <div id="hint">Glisser pour tourner · Molette pour plonger</div>
 
 
@@ -774,10 +875,7 @@ document.querySelectorAll("nav a").forEach(a=>{
   if(label.includes("édition")) a.addEventListener("click",e=>{e.preventDefault();enterWorkspace("magazine");});
   if(label.includes("atlas")) a.addEventListener("click",e=>{e.preventDefault();enterWorkspace("globe");});
 });
-/* Make the top navigation explicit without adding another competing system. */
-const nav=document.querySelector("nav");
-nav.innerHTML='<a href="#" data-mode="magazine">Magazine</a><a href="#" data-mode="studio">Studio</a><a href="#" data-mode="globe">Globe</a><a href="#">Atlas</a>';
-nav.querySelectorAll("[data-mode]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();enterWorkspace(a.dataset.mode);}));
+/* Public navigation is intentionally reduced to the single wedding interface. Magazine/Studio remain internal workspaces. */
 
 function renderMagazine(){
   const root=document.getElementById("magazinePages");
@@ -850,7 +948,154 @@ document.getElementById("timelineViewport").addEventListener("wheel",e=>{
 },{passive:false});
 
 
+/* ---------- WEDDING TOOL UNIVERSE ---------- */
+const WEDDING_TOOLS={
+  weddings:{
+    label:"Mariages",
+    intro:"Découvrir des mariages, traditions, histoires et expériences du monde entier.",
+    placeholder:"Mariage à Kyoto, mariage indien, tradition, histoire…",
+    links:[["createWedding","Créer mon mariage"],["findProvider","Trouver un prestataire"],["exploreWedding","Explorer les mariages"]]
+  },
+  destinations:{
+    label:"Destinations",
+    intro:"Explorer les lieux où le mariage devient un voyage : villes, domaines, plages, châteaux et territoires.",
+    placeholder:"Château en France, plage en Grèce, mariage à Marrakech…",
+    links:[["createWedding","Créer mon mariage"],["findProvider","Trouver un lieu"],["exploreDestination","Explorer les destinations"]]
+  },
+  inspiration:{
+    label:"Inspiration",
+    intro:"Chercher des idées visuelles et éditoriales : robe, fleurs, décoration, photographie, vidéo.",
+    placeholder:"Robe minimaliste, fleurs blanches, table, photo…",
+    links:[["createWedding","Créer mon mariage"],["provider","Vous êtes prestataire ? Créez votre fiche"],["exploreInspiration","Explorer l'inspiration"]]
+  },
+  people:{
+    label:"Personnes",
+    intro:"Relier couples, invités, témoins, wedding planners et professionnels autour d'un même mariage.",
+    placeholder:"Photographe à Paris, wedding planner, saxophoniste…",
+    links:[["createWedding","Créer mon mariage"],["provider","Vous êtes prestataire ? Créez votre fiche"],["explorePeople","Explorer les personnes"]]
+  },
+  music:{
+    label:"Musique",
+    intro:"Explorer la bande-son du mariage : cérémonie, cocktail, dîner, première danse et soirée.",
+    placeholder:"Musique cérémonie, première danse, saxophone…",
+    links:[["createWedding","Créer mon mariage"],["provider","Vous êtes prestataire ? Créez votre fiche"],["exploreMusic","Explorer la musique"]]
+  },
+  day:{
+    label:"Jour J",
+    intro:"Lire le mariage comme une Timeline vivante : avant, cérémonie, cocktail, repas, fête, après.",
+    placeholder:"Cérémonie à 15h, cocktail, première danse, lendemain…",
+    links:[["createWedding","Créer mon mariage"],["findProvider","Organiser le Jour J"],["exploreDay","Explorer le Jour J"]]
+  }
+};
+
+function openWeddingTool(id){
+  const tool=WEDDING_TOOLS[id]||WEDDING_TOOLS.weddings;
+  document.querySelectorAll(".wedding-tool").forEach(b=>b.classList.toggle("on",b.dataset.wtool===id));
+  const input=document.getElementById("universalSearch");
+  if(input) input.placeholder=tool.placeholder;
+  document.getElementById("actionKicker").textContent="Univers mariage · "+tool.label;
+  document.getElementById("actionTitle").textContent=tool.label;
+  document.getElementById("actionIntro").textContent=tool.intro;
+  document.getElementById("actionLinks").innerHTML=tool.links.map(([id,label])=>'<button class="action-link" data-action="'+id+'">'+label+'</button>').join("");
+  document.getElementById("actionDrawer").classList.add("on");
+  document.getElementById("actionDrawer").setAttribute("aria-hidden","false");
+  document.querySelectorAll(".action-link").forEach(b=>b.addEventListener("click",()=>handleWeddingAction(b.dataset.action)));
+}
+
+function handleWeddingAction(action){
+  if(action==="provider"||action==="findProvider"){
+    openProviderForm();
+    return;
+  }
+  if(action==="createWedding"){
+    openWeddingForm();
+    return;
+  }
+  const map={
+    exploreWedding:"mariage",
+    exploreDestination:"destination mariage",
+    exploreInspiration:"inspiration mariage",
+    explorePeople:"prestataire mariage",
+    exploreMusic:"musique mariage",
+    exploreDay:"timeline jour J"
+  };
+  if(map[action]){
+    const input=document.getElementById("universalSearch");
+    input.value=map[action];
+    universalSearch();
+    closeActionDrawer();
+  }
+}
+
+function openProviderForm(){
+  document.getElementById("actionKicker").textContent="Inscription prestataire";
+  document.getElementById("actionTitle").textContent="Créer ma fiche";
+  document.getElementById("actionIntro").textContent="Une seule fiche réutilisable pour votre visibilité, vos prestations, vos demandes et vos mariages.";
+  document.getElementById("actionLinks").innerHTML="";
+  document.getElementById("actionForm").innerHTML=`
+    <div class="form-grid">
+      <div class="form-field"><label>Nom / entreprise</label><input placeholder="Votre nom ou nom commercial"></div>
+      <div class="form-field"><label>Activité</label><input placeholder="Photographe, DJ, saxophoniste…"></div>
+      <div class="form-field"><label>Ville</label><input placeholder="Ville"></div>
+      <div class="form-field"><label>Zone</label><input placeholder="France, Europe, international…"></div>
+      <div class="form-field full"><label>Présentation</label><textarea placeholder="Votre univers, votre spécialité, votre manière de travailler…"></textarea></div>
+      <div class="form-field full"><label>Prestations & tarifs</label><textarea placeholder="Prestations, formules, prix ou sur devis…"></textarea></div>
+      <div class="form-field"><label>Disponibilités</label><input placeholder="Agenda / périodes"></div>
+      <div class="form-field"><label>Site / réseaux</label><input placeholder="Lien principal"></div>
+      <div class="form-field full"><label>Portfolio / médias</label><input placeholder="Lien vers galerie, vidéo ou portfolio"></div>
+      <div class="form-field"><label>Documents</label><input placeholder="Assurance / statut / devis…"></div>
+      <div class="form-field"><label>Paiement</label><input placeholder="Informations de facturation"></div>
+    </div>
+    <button class="form-submit" id="providerSubmit">Créer ma fiche</button>
+    <div class="form-note">La fiche constitue l'identité source. Les prestations, disponibilités, documents et demandes pourront ensuite être reliés à chaque mariage.</div>`;
+  document.getElementById("providerSubmit").addEventListener("click",()=>{
+    document.getElementById("actionIntro").textContent="Votre fiche est prête à être complétée. Les informations pourront être réutilisées dans chaque mariage.";
+    document.getElementById("providerSubmit").textContent="Fiche créée";
+  });
+}
+
+function openWeddingForm(){
+  document.getElementById("actionKicker").textContent="Dossier mariage";
+  document.getElementById("actionTitle").textContent="Créer mon mariage";
+  document.getElementById("actionIntro").textContent="Le dossier devient la source de vérité du mariage : identité, programme, ambiance, prestataires, besoins et médias.";
+  document.getElementById("actionLinks").innerHTML="";
+  document.getElementById("actionForm").innerHTML=`
+    <div class="form-grid">
+      <div class="form-field"><label>Nom 1</label><input placeholder="Prénom / nom"></div>
+      <div class="form-field"><label>Nom 2</label><input placeholder="Prénom / nom"></div>
+      <div class="form-field"><label>Date</label><input type="date"></div>
+      <div class="form-field"><label>Lieu / ville</label><input placeholder="Lieu du mariage"></div>
+      <div class="form-field"><label>Invités</label><input type="number" placeholder="Nombre"></div>
+      <div class="form-field"><label>Forfait</label><select><option>Magazine</option><option>Magazine + Film</option><option>Wedding Experience</option><option>World Wedding Experience</option></select></div>
+      <div class="form-field full"><label>Histoire & ambiance</label><textarea placeholder="Votre histoire, style, couleurs, thème, inspirations…"></textarea></div>
+      <div class="form-field full"><label>Programme</label><textarea placeholder="Cérémonie, cocktail, repas, soirée, lendemain…"></textarea></div>
+      <div class="form-field full"><label>Prestataires</label><textarea placeholder="Déjà choisis, à rechercher, contacts…"></textarea></div>
+      <div class="form-field full"><label>Besoins</label><textarea placeholder="Transport, hébergement, restauration, accessibilité, enfants, allergies, contraintes…"></textarea></div>
+      <div class="form-field full"><label>Médias & documents</label><input placeholder="Photos, vidéos, documents ou liens"></div>
+    </div>
+    <button class="form-submit" id="weddingSubmit">Créer mon mariage</button>
+    <div class="form-note">Les mêmes informations peuvent alimenter la production du magazine, la Timeline, les prestataires et les médias sans recréer plusieurs formulaires.</div>`;
+  document.getElementById("weddingSubmit").addEventListener("click",()=>{
+    document.getElementById("actionIntro").textContent="Le dossier mariage est prêt à devenir la source de vérité de votre édition.";
+    document.getElementById("weddingSubmit").textContent="Dossier créé";
+  });
+}
+
+function closeActionDrawer(){
+  document.getElementById("actionDrawer").classList.remove("on");
+  document.getElementById("actionDrawer").setAttribute("aria-hidden","true");
+}
+document.querySelectorAll(".wedding-tool").forEach(b=>b.addEventListener("click",()=>openWeddingTool(b.dataset.wtool)));
+document.getElementById("providerSignupTop").addEventListener("click",openProviderForm);
+document.getElementById("actionClose").addEventListener("click",closeActionDrawer);
+document.getElementById("actionBackdrop").addEventListener("click",closeActionDrawer);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeActionDrawer();});
+openWeddingTool("weddings");
+document.getElementById("actionDrawer").classList.remove("on");
+closeActionDrawer();
+
 /* ---------- UNIVERSAL WEB SOURCE ENGINE ---------- */
+
 const SOURCE_FALLBACKS=[
   {title:"Wikimedia Commons",domain:"commons.wikimedia.org",url:"https://commons.wikimedia.org/",snippet:"Images, vidéos et médias documentés du monde entier.",tags:["image","photo","video","art","mariage"]},
   {title:"UNESCO",domain:"unesco.org",url:"https://www.unesco.org/",snippet:"Culture, patrimoine, traditions et connaissances internationales.",tags:["culture","patrimoine","tradition","monde"]},
