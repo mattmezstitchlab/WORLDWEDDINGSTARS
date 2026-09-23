@@ -28,6 +28,9 @@
   .brand h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(15px,1.6vw,21px);
     letter-spacing:.42em;text-transform:uppercase;}
   .brand h1 em{color:var(--gold);font-style:normal;}
+
+  .brand-ring{display:inline-block;width:.72em;height:.72em;border-radius:50%;vertical-align:-.03em;margin:0 .04em;border:2px solid transparent;background:linear-gradient(var(--ink),var(--ink)) padding-box,conic-gradient(#ff3b30,#ff9500,#ffcc00,#34c759,#00c7be,#007aff,#5856d6,#af52de,#ff2d55,#ff3b30) border-box;box-shadow:0 0 12px rgba(150,100,255,.2);}
+
   .brand span{display:block;margin-top:5px;font-size:9px;letter-spacing:.34em;text-transform:uppercase;color:var(--mist);}
   nav{display:flex;gap:26px;pointer-events:auto;}
   nav a{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--mist);text-decoration:none;
@@ -297,6 +300,53 @@
     .form-field.full{grid-column:auto;}
   }
 
+
+  /* ---------- RAINBOW ASSEMBLER + COFFRET UNIVERSE ---------- */
+  .rainbow-tool{position:relative;width:46px;height:46px;border:0;background:transparent;display:grid;place-items:center;cursor:grab;padding:0;margin-top:8px;}
+  .rainbow-ring{width:28px;height:28px;border-radius:50%;border:3px solid transparent;background:linear-gradient(#0b0e14,#0b0e14) padding-box,conic-gradient(#ff3b30,#ff9500,#ffcc00,#34c759,#00c7be,#007aff,#5856d6,#af52de,#ff2d55,#ff3b30) border-box;box-shadow:0 0 18px rgba(120,100,255,.16);transition:.25s;}
+  .rainbow-tool:hover .rainbow-ring,.rainbow-tool.on .rainbow-ring,.rainbow-tool.drop-target .rainbow-ring{transform:scale(1.16);box-shadow:0 0 28px rgba(180,100,255,.35);}
+  .rainbow-tool.drop-target .rainbow-ring{animation:rainbowPulse .8s ease-in-out infinite alternate;}
+  @keyframes rainbowPulse{to{filter:brightness(1.45);transform:scale(1.24);}}
+  .rainbow-tool::after{content:attr(aria-label);position:absolute;right:50px;top:50%;transform:translateY(-50%);opacity:0;pointer-events:none;white-space:nowrap;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--paper);background:rgba(11,14,20,.9);padding:7px 9px;backdrop-filter:blur(10px);transition:.2s;}
+  .rainbow-tool:hover::after,.rainbow-tool.on::after{opacity:1;}
+
+  #coffretExplorer{position:fixed;inset:0;z-index:70;background:rgba(8,10,14,.96);backdrop-filter:blur(18px);display:none;color:var(--paper);overflow:hidden;}
+  #coffretExplorer.on{display:block;}
+  .coffret-head{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;border-bottom:1px solid rgba(244,239,228,.1);}
+  .coffret-head .eyebrow{font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:rgba(244,239,228,.5);}
+  .coffret-head h3{font:400 26px/1 'Cormorant Garamond',serif;margin-top:4px;}
+  .coffret-head button{border:1px solid rgba(244,239,228,.18);background:transparent;color:var(--paper);padding:9px 12px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;}
+  #coffretGrid{height:calc(100vh - 76px);overflow:auto;padding:28px;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;align-content:start;}
+  .coffret-card{aspect-ratio:1/1;position:relative;overflow:hidden;padding:13px;background:linear-gradient(145deg,#171b23,#252b36);border:1px solid rgba(244,239,228,.09);cursor:grab;display:flex;flex-direction:column;justify-content:space-between;transition:.2s;}
+  .coffret-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 15%,hsl(var(--h) 58% 34%/.5),transparent 45%);pointer-events:none;}
+  .coffret-card:hover{border-color:rgba(244,239,228,.3);transform:translateY(-2px);}
+  .coffret-card .num,.coffret-card .place,.coffret-card .box-title{position:relative;z-index:1;}
+  .coffret-card .num{font-size:7px;letter-spacing:.2em;color:rgba(244,239,228,.5);}
+  .coffret-card .box-title{font:400 23px/1 'Cormorant Garamond',serif;max-width:9ch;}
+  .coffret-card .place{font-size:7px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,239,228,.56);}
+  #coffretBook{position:fixed;inset:0;z-index:75;display:none;place-items:center;background:rgba(8,10,14,.82);backdrop-filter:blur(14px);}
+  #coffretBook.on{display:grid;}
+  .book-wrap{width:min(760px,92vw);max-height:90vh;position:relative;}
+  .book-close{position:absolute;right:-4px;top:-42px;border:0;background:transparent;color:var(--paper);font-size:24px;cursor:pointer;}
+  .book-cover{display:grid;grid-template-columns:1fr 1fr;aspect-ratio:1.72/1;box-shadow:0 28px 100px rgba(0,0,0,.55);}
+  .book-page{position:relative;overflow:hidden;padding:30px;background:#f4efe4;color:#161616;border-right:1px solid rgba(0,0,0,.08);}
+  .book-page.dark{background:#171b23;color:#f4efe4;}
+  .book-page h4{font:400 clamp(28px,5vw,52px)/.92 'Cormorant Garamond',serif;margin:20px 0 12px;}
+  .book-page p{font-size:10px;line-height:1.7;color:#666;max-width:38ch;}
+  .book-page.dark p{color:#aeb3bd;}
+  .book-kicker{font-size:7px;letter-spacing:.28em;text-transform:uppercase;color:#a4864a;}
+  .book-meta{position:absolute;bottom:18px;left:30px;right:30px;display:flex;justify-content:space-between;font-size:7px;letter-spacing:.16em;color:#999;text-transform:uppercase;}
+  .book-media{position:absolute;inset:16% 12% 26%;background:linear-gradient(135deg,#2b3340,#8f6748,#d1b879);}
+  .book-timeline{position:absolute;left:0;right:0;bottom:0;height:22px;display:flex;background:rgba(11,14,20,.08);}
+  .book-timeline i{flex:1;border-right:1px solid rgba(11,14,20,.1);}
+  #assemblerTray{position:fixed;left:50%;bottom:18px;transform:translateX(-50%) translateY(120px);z-index:78;display:flex;align-items:center;gap:8px;max-width:min(860px,calc(100vw - 32px));padding:8px 10px;background:rgba(11,14,20,.92);border:1px solid rgba(244,239,228,.16);backdrop-filter:blur(18px);transition:.3s;opacity:0;pointer-events:none;}
+  #assemblerTray.on{transform:translateX(-50%) translateY(0);opacity:1;pointer-events:auto;}
+  .assembler-label{font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:#a4864a;white-space:nowrap;}
+  #assemblerItems{display:flex;gap:5px;overflow:auto;max-width:520px;}
+  .assembler-chip{font-size:7px;letter-spacing:.08em;color:#ddd;padding:7px 8px;border:1px solid rgba(244,239,228,.12);white-space:nowrap;}
+  #composeSelection{border:1px solid rgba(244,239,228,.22);background:transparent;color:var(--paper);padding:8px 10px;font-size:7px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;white-space:nowrap;}
+  @media(max-width:900px){#coffretGrid{padding:16px;grid-template-columns:repeat(2,minmax(0,1fr));}.coffret-head{padding:0 16px}.book-cover{grid-template-columns:1fr;aspect-ratio:auto;max-height:78vh;overflow:auto}.book-page{min-height:250px}.book-page:nth-child(2){min-height:250px}.rainbow-tool::after{right:48px}.assembler-label{display:none;}}
+
 </style>
 </head>
 <body>
@@ -305,7 +355,7 @@
 
 <header>
   <div class="brand">
-    <h1>World <em>Wedding</em> Magazine</h1>
+    <h1>W<span class="brand-ring" aria-hidden="true"></span>rld <em>Wedding</em> Magazine</h1>
     <span>La carte est la couverture — Édition N°001</span>
   </div>
   <button class="header-provider" id="providerSignupTop">Vous êtes prestataire ? Créez votre fiche</button>
@@ -947,6 +997,91 @@ document.getElementById("timelineViewport").addEventListener("wheel",e=>{
   document.getElementById("timelineViewport").scrollLeft+=e.deltaY+e.deltaX;
 },{passive:false});
 
+
+
+// ---------- RAINBOW ASSEMBLER / WEDDINGBOX ----------
+const WB_DATA_URL="https://raw.githubusercontent.com/mattmezstitchlab/WEDDINGBOX/main/data/territories/lille-metropole/coffrets.json";
+let weddingBoxData=[];
+let assembledItems=[];
+
+async function loadWeddingBoxes(){
+  if(weddingBoxData.length)return weddingBoxData;
+  try{
+    const res=await fetch(WB_DATA_URL);
+    if(!res.ok)throw new Error("WEDDINGBOX");
+    const data=await res.json();
+    weddingBoxData=Array.isArray(data)?data:(data.coffrets||[]);
+  }catch(e){
+    // Keep the interface usable even when the external data source is unavailable.
+    weddingBoxData=Array.from({length:365},(_,i)=>({id:"C-"+String(i+1).padStart(3,"0"),numero:i+1,titre:"Coffret "+String(i+1).padStart(3,"0"),communeId:"CM-"+String((i%13)+1).padStart(2,"0"),tags:["Mariage","Lille"],accroche:"Édition de mariage à découvrir.",texte:"Un coffret éditorial à compléter avec son lieu, son moment, sa lumière et ses médias.",saisonId:"SA-"+String((i%4)+1).padStart(2,"0"),moments:["MO-"+String((i%10)+1).padStart(2,"0")]}));
+  }
+  return weddingBoxData;
+}
+function openCoffretExplorer(){
+  document.getElementById("coffretExplorer").classList.add("on");
+  document.getElementById("coffretExplorer").setAttribute("aria-hidden","false");
+  renderCoffretGrid();
+  document.getElementById("rainbowAssembler").classList.add("on");
+}
+function closeCoffretExplorer(){document.getElementById("coffretExplorer").classList.remove("on");document.getElementById("coffretExplorer").setAttribute("aria-hidden","true");}
+async function renderCoffretGrid(){
+  const grid=document.getElementById("coffretGrid");
+  grid.innerHTML="<div style='grid-column:1/-1;padding:30px;color:#888;font-size:9px;letter-spacing:.18em;text-transform:uppercase'>Chargement des 365 éditions…</div>";
+  const data=await loadWeddingBoxes();
+  grid.innerHTML=data.map((b,i)=>{
+    const hue=(i*47)%360;
+    return '<button class="coffret-card" draggable="true" data-assembly-type="coffret" data-assembly-label="'+escapeHtml(b.titre||("Coffret "+(i+1)))+'" style="--h:'+hue+'"><span class="num">C-'+String(b.numero||i+1).padStart(3,"0")+'</span><span class="box-title">'+escapeHtml(b.titre||"Édition")+'</span><span class="place">'+escapeHtml(b.accroche||"Lille Métropole")+'</span></button>';
+  }).join("");
+  grid.querySelectorAll(".coffret-card").forEach((el,i)=>{
+    el.addEventListener("click",()=>openCoffretBook(data[i]));
+  });
+}
+function openCoffretBook(b){
+  document.getElementById("bookKicker").textContent=(b.id||"COFFRET")+" · LILLE MÉTROPOLE";
+  document.getElementById("bookTitle").textContent=b.titre||"Édition";
+  document.getElementById("bookPlace").textContent=b.accroche||"Lille Métropole";
+  document.getElementById("bookSeason").textContent=b.saisonId||"Saison";
+  document.getElementById("bookMoment").textContent=(b.moments||[]).join(" · ")||"Moment du mariage";
+  document.getElementById("bookText").textContent=b.texte||"Le coffret rassemble lieu, ambiance, moments, lumière, médias et récit.";
+  document.getElementById("coffretBook").classList.add("on");
+  document.getElementById("coffretBook").setAttribute("aria-hidden","false");
+}
+function closeCoffretBook(){document.getElementById("coffretBook").classList.remove("on");document.getElementById("coffretBook").setAttribute("aria-hidden","true");}
+function addAssembly(type,label){
+  if(!label)return;
+  assembledItems.push({type,label});
+  const tray=document.getElementById("assemblerTray");
+  document.getElementById("assemblerItems").innerHTML=assembledItems.map(x=>'<span class="assembler-chip">'+escapeHtml(x.type.toUpperCase())+' · '+escapeHtml(x.label)+'</span>').join("");
+  tray.classList.add("on");
+}
+function startAssemblyDrag(el,e){
+  const type=el.dataset.assemblyType||"media";
+  const label=el.dataset.assemblyLabel||el.getAttribute("aria-label")||el.textContent.trim().slice(0,70)||"Élément éditorial";
+  e.dataTransfer.setData("application/worldweddingstars",JSON.stringify({type,label}));
+  e.dataTransfer.effectAllowed="copy";
+}
+document.addEventListener("dragstart",e=>{
+  const el=e.target.closest(".source-point,.coffret-card,.mag-page,.mag-media");
+  if(!el)return;
+  if(!el.dataset.assemblyType)el.dataset.assemblyType=el.classList.contains("mag-media")?"media":el.classList.contains("mag-page")?"page":"source";
+  if(!el.dataset.assemblyLabel)el.dataset.assemblyLabel=el.querySelector("strong")?.textContent||el.querySelector(".page-meta")?.textContent||el.querySelector(".media-label")?.textContent||el.getAttribute("aria-label")||el.textContent.trim().slice(0,70)||"Élément éditorial";
+  startAssemblyDrag(el,e);
+});
+const assembler=document.getElementById("rainbowAssembler");
+assembler.addEventListener("click",openCoffretExplorer);
+assembler.addEventListener("dragover",e=>{e.preventDefault();assembler.classList.add("drop-target");e.dataTransfer.dropEffect="copy";});
+assembler.addEventListener("dragleave",()=>assembler.classList.remove("drop-target"));
+assembler.addEventListener("drop",e=>{
+  e.preventDefault();assembler.classList.remove("drop-target");
+  try{const data=JSON.parse(e.dataTransfer.getData("application/worldweddingstars"));addAssembly(data.type,data.label);}catch(_){}
+});
+document.getElementById("closeCoffretExplorer").addEventListener("click",closeCoffretExplorer);
+document.getElementById("closeCoffretBook").addEventListener("click",closeCoffretBook);
+document.getElementById("composeSelection").addEventListener("click",()=>{
+  const first=weddingBoxData[0]||{id:"C-001",titre:"Votre édition",texte:"Votre sélection éditoriale.",accroche:"World Wedding Stars"};
+  openCoffretBook({...first,titre:assembledItems.length?assembledItems.map(x=>x.label).join(" + "):first.titre,texte:"Cette édition est composée à partir de "+assembledItems.length+" éléments glissés depuis le monde Wedding Stars."});
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeCoffretBook();closeCoffretExplorer();}});
 
 /* ---------- WEDDING TOOL UNIVERSE ---------- */
 const WEDDING_TOOLS={
